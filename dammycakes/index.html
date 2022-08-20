@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link href="https://fonts.googleapis.com/css2?family=Sofia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<meta charset="UTF-8">
+<title>Dammy's Bakery</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="/dammy_cakes.css">
+
+
+</head>
+
+<body>
+<!-- Navigation Menu -->
+<div id="nav">
+    <!-- Close Button For Mobile -->
+<span class="closebtn" href="javascript:void(0)" onclick="closenav()"><span class="material-icons">close</span></span>  
+<!-- Close Button For PC --><span class="closebtnpc" onclick="closenav()"><span class="material-icons">left</span></span>
+
+<a href="/index.html">Home</a>
+<a href="./about.html">About</a>
+<a href="gallery.html">Gallery</a>
+</div>
+
+<div class="header">
+ <!-- Open Nav Button For Mobile & PC -->
+<span class="navbtn" onclick="opennav()"><span class="material-icons">menu</span></span>  <span class="navbtnpc" onclick="opennavpc()"><span class="material-icons">right</span></span>
+<!-- Darkmode button -->
+<button class="founderbtn" onclick="darkmode()" style="float:right; color#660066;font-size:inherit"><span class="material-icons">dark_mode</span></button>
+<span>Dammy's Cake World</span>
+</div>
+
+<div id="pushallnav">
+    <img src="/bakers.jpg" style="width:100%" alt="our team">
+<div class="content">
+
+<div>
+<h2>Welcome</h2>
+<p>Welcome to Dammy's Cake word , a culinary baking platform where all types of pastries and cakes for different occasions are made by professional bakers.</p> 
+</div>
+<div>
+<h2>Who, What, Where?</h2>
+<p>Located in the beautiful Lekki ahjah expressway in the city of Lagos, we serve all different types of cakes and pastries depending on your taste. We also do home service.</p>
+</div> 
+</div>
+
+
+<div id="flex-container">
+<h2 class="heading" id="flexHead">What Can We <u><i>Bake</i></u> You Today?</h2>
+ <div>
+   <img src="/bread.jpg" alt="bread">
+<h5>Bread</h5>
+<p>Coconut flavoured bread from Dammy's Cake World bakeries in the heart of LA.</p>
+<p>Get Now</p><span><a href="/bread.html">From ₦250</a></span>
+</div>
+<div>
+<img src="/donut.jpg" alt="donut">
+<h5>Donuts</h5>
+<p>x5 Blueberry flavoured Donuts from Dammy's Cake World bakeries in the heart of LA.</p>
+<p>Get Now</p><span><a href="/donut.html">From ₦800</a></span>
+</div>
+<div>
+<img src="/cake.jpg" alt="cake">
+<h5>Cakes</h5>
+<p>15inch-diameter cakes from Dammy's Cake World bakeries in the heart of LA.</p>
+<p>Get Now</p><span><a href="/cake.html">From ₦4600</a></span>
+</div>
+<div>
+<img src="/cupcake.jpg" alt="cupcake">
+<h5>Cupcakes</h5>
+<p>Sweet flavoured cupcakes from Emax bakeries in the heart of LA.</p>
+<p>Get Now</p><span><a href="/cupcake.html" target="_parent">From ₦800</a></span>
+</div>
+
+<button id="more" onclick="show()"><span class="material-icons">expand_more</span></button>
+
+<div id="hidden">
+<img src="/chin.jpg" alt="Chin-chin">
+<h5>Chin-chin</h5>
+<p>Cruchy crisp Chin-chin squares from Dammy's Cake is one of a kind and you won't find it anywhere else</p>
+<p>Get Now</p> <span><a href="/chin.html">From ₦200</a></span>
+</div>
+</div>
+
+<button class="founderbtn" onclick="founders()"><h2 class="heading">Meet The Founders<span class="material-icons">expand_more</span></h2></button>
+<div id="founders">
+<div class="founders">
+<img id="f1" src="/dammy.jpg" alt="Damilola O">
+<div>
+Omolaju Damilola is a student of Mass Communication in one of Nigeria's leading state universities. When she's not reading up on Shakespeare, you'll find Dammy baking away in the kitchen. She is a co-founder at Dammy's Cake World and Head Baker.
+</div>
+</div>
+<div class="founders">
+<img id="f2" src="/emmanuel.jpg" alt="Emmanuel O">
+<div>
+Emmanuel Omolaju is a Web Developer, UI/UX designer and graphic artist. He is one of the co-founders at Dammy's Cake World. He also heads the digital and ICT resources of the company.
+ </div>
+</div>
+</div>
+<footer>
+<p>
+<span class="material-icons">person_pin_circle</span><u>ADDRESS:</u><br>No, 4 Oriyomi Street, Lekki-Ajah Expressway, Lagos State, Nigeria.</p>
+<p>
+<u>SOCIAL:</u><br>IG: @dammyvakes<br>FB: Dammy's_cakes<br>Twitter: @dammy_cakes</p>
+<p>
+<span class="material-icons">whatsapp</span>PHONE:+234909711780 or +2349032531855</p>
+<p>
+<span class="material-icons">language</span>WEB: www.dammyscakes.com</p>
+</footer>
+</div>
+
+<script>
+function darkmode() {
+    var body = document.body;
+    body.classList.toggle('darkmode');
+}
+
+function show() {
+document.getElementById('more').style.display = "none";
+document.getElementById('hidden').style.display = "block";
+
+var x =document.getElementById('flex-container');
+x.style.flexWrap ="wrap";
+x.style.height = "auto";
+x.style.justifyContent = "center";
+x.style.overflow ="visible";
+document.getElementById('flexHead').style.display = "none";
+}
+
+function founders() {
+document.getElementById('founders').style.display = "block"
+}
+
+function opennav() {
+ document.getElementById('nav').style.width = "100%"; 
+ document.getElementById('pushallnav').style.marginLeft = "2%"
+}
+function closenav() {
+document.getElementById('nav').style.width = "0";
+document.getElementById('pushallnav').style.marginLeft ="0";
+}
+function opennavpc() {
+ document.getElementById('nav').style.width = "20%";
+ document.getElementById('pushallnav').style.marginLeft = "20%"
+}
+</script>
+</body>
+</html>

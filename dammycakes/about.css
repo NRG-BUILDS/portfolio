@@ -1,0 +1,54 @@
+body {
+    background: linear-gradient(to bottom, black, #660066) ;
+    text-align: center;
+    color: white;
+}
+.aboutlinks {
+    padding-top:30px;
+    margin:5%;
+    line-height: 1.8;
+    font-size: 13px;
+    font-weight: 400;
+}
+.contact {
+    color: chocolate;
+}
+.contact span {
+    color:grey;
+}
+a {
+    display: block;
+    margin:2px 0;
+    color:white;
+    transition: 0.2s;
+}
+a:hover {
+    margin: 4px 0;
+    color: pink;
+}
+.suggestbox {
+    background-color: #4d0026;
+    font-weight:450;
+    padding: 5%;
+}
+.suggestbox h2 {color: grey}
+input {
+    padding: 5px;
+}
+input, textarea {
+    color:white;
+    display: block;
+    border-radius: 5px;
+    background-color:#4d0026;
+    border: 2px solid chocolate;
+    width: 100%;
+}
+input[type=submit] {
+    background-color:chocolate;
+}
+#copyright {
+    font-size: 10px;
+}
+#copyright a {
+    color: skyblue;
+}

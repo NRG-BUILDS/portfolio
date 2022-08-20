@@ -1,0 +1,28 @@
+#main {
+    width:100%;
+}
+div {
+    padding: 10px 0;
+}
+.flexpics img {
+    width:20%;
+    height: 100%;
+    float: left;
+    margin:0;
+    padding: 0;
+    transition: 0.3s;
+    filter: brightness(60%);
+}
+.flexpics img:hover {
+    width:100%;
+    z-index:1;
+    filter: none;
+}
+.flexpics {
+    margin:auto;
+    display:flex;
+    justify-content:;
+    width:100%;
+    height:200px;
+    overflow: auto;
+}
