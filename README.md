@@ -1,0 +1,3 @@
+# portfolio
+The power and energy of NRG stored in one place
+That's it. Just a journal of my works, journey and all...
