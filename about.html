@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="about.css">
+    <title>About NRG</title>
+</head>
+
+<body>
+<!--========NAVIGATION BAR==========-->    <div>
+        <a class="navi" id="navbtn" href="javascript:void(0)" onclick="showNav()">&#9776;</a>
+    </div>
+    <div id="nav">
+        <ul>
+        <li><span id="logo">NRG</span></li>
+        
+        <li><a class="navi" href="javascript:void(0)" onclick="closeNav()">&times;</a></li>
+        
+        <hr>
+        <li><a href="./index.html">Home</a></li>
+        <li class="selected"><a href="/about.html">About</a></li>
+        
+        <li><a href="./service.html">Services</a></li>
+        <li><a href="#contact" onclick="closeNav()">Contact</a></li>
+        </ul>
+    </div>    
+    
+<!--=====NRG ABOUT PROFILE PIC=====-->  
+<div class="contentMargin">
+    <div class="profileStatic">
+        <img id="profilePic" src="./profile_dark.jpg" alt="Emmanuel">
+    </div>
+    <h1>About Me</h1>
+    <hr>
+    <div class="panel">
+        <span>Hello World!</span>
+        
+        <h2>I'm Emmanuel Omolaju. Friends call me <span id="nicknames">Emmax</span></h2>
+        <p>I'm a frontend developer based in Lagos State and a student of the Federal University of Technology, Akure, Ondo, Nigeria.</p>
+        <p>I've ALWAYS had a passion for tech, gadgets and physical science. I officially started my journey into code in May 2022.</p>
+    </div>
+    
+    <h1>Hobbies</h1>
+    <hr>
+    <div class="panel">
+        <p>Asides code code code, I also like to...</p>
+        <ul>
+            <li>Play with a camera</li>
+            <li>Play video games</li>
+            <li>Watch documentaries</li>
+            <li>Read the news (LOL)</li>
+            <li>Participate in student politics.</li>
+        </ul>
+        
+    </div>
+    
+    <h2>
+        Some Edits
+        <a href="insta" style="float:right"><button class="purplebtn">Check Out More On Twitter</button></a>
+    </h2>
+    <hr>
+    
+    <div class="projectFlex">
+        <div class="projectItem">
+            <img src="./image/pic1.jpg" alt="">
+        </div>
+        <div class="projectItem">
+            <img src="./image/pic2.jpg" alt="">
+        </div>
+        <div class="projectItem">
+            <img src="./image/pic3.jpg" alt="">
+        </div>
+        <div class="projectItem">
+            <img src="./image/pic4.jpg" alt="">
+        </div>
+        <div class="projectItem">
+            <img src="./image/pic5.jpg" alt="">
+        </div>
+        <div class="projectItem">
+            <img src="./image/pic6.jpg" alt="">
+        </div>
+    </div>
+    <div id="contact" class="contact panel">
+        <div>
+            <h2>Interested in working with me?</h2>
+        </div>
+        <div>
+            <a href="https://twitter.com/nrg_build?t=kL-WRsMSWMThqPSUvrQExQ&s=09"><span class="bi bi-twitter"></span></a>
+            <a href="https://twitter.com/nrg_build?t=kL-WRsMSWMThqPSUvrQExQ&s=09"><span class="bi bi-github"></span></a>
+            <a href="https://twitter.com/nrg_build?t=kL-WRsMSWMThqPSUvrQExQ&s=09"><span class="bi bi-linkedin"></span></a>
+        </div>
+    </div>
+        
+    
+
+    
+
+
+<script src="portfolio.js">portfolio.js</script>
+<script src="about.js"></script>
+</body>
+
+</html>

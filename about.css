@@ -1,0 +1,10 @@
+.profileStatic { 
+    position: sticky;
+    top: 0;
+    padding: 15% 0;
+    text-align: center;
+    z-index: -1;
+}
+.projectItem img { 
+    height:340px;
+}

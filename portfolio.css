@@ -1,0 +1,224 @@
+body {
+    margin:0;
+    background-color: var(--bgblack);
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+html { 
+    scroll-behavior: smooth;
+}
+* { 
+    box-sizing: border-box;
+}
+.contentMargin { 
+    margin: 0 2%;
+} /*Control side-margin of major content*/
+/*Colors & Links*/
+:root { 
+    --bgblack: #1a1a1a;
+    --fadeblack: #333333;
+    --purple: #8533ff
+}
+a { 
+    text-decoration:none; color:white;
+}
+/*==============Nav Bar===============*/
+.navi { 
+    font-size: 30px;
+    margin: 10px;
+}
+#nav { 
+    text-align: center;
+    height:0%;
+    overflow: auto;
+    width:100%;
+    transition: 0.6s;
+    z-index: 1;
+    position: fixed;
+    top: 0; left: 0;
+    background-color: black;
+    opacity:0.9;
+}
+#logo { 
+    font-size: 28px;
+    padding: 0%;
+    padding-left: 0;
+}
+#nav li { 
+    margin: 10% 0;
+    padding: 5%;
+}
+#nav ul { 
+    list-style-type: none;
+    margin:0; padding: 0;
+}
+.selected, li:active { 
+    background-color: coral;
+}
+/*==========End Of Nav Menu===========*/
+
+.panel { 
+    background-color: var(--fadeblack);
+    border-radius: 10px;
+    padding: 20px;
+}
+button { 
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+    color: white;
+}
+.purplebtn { 
+    background-color: var(--purple);
+}
+.transbtn { 
+    background: transparent;
+    border: 1px solid var(--purple);
+}
+/*=======Inside Welcome Section========*/
+
+#profile { text-align: center}
+#profilePic { 
+    height: 180px; width: 180px;
+    border-radius: 50%;
+    animation: roll 2s;
+}
+@keyframes roll { 
+    0% { 
+        transform: translate(100%, 0%) rotate(180deg);
+    }
+    100% {
+        transform: translate(0%, 0%) rotate(0deg);
+    }   
+}
+#welcome { 
+    margin: 15% 0;
+}
+/*==========Inside Stats Div===========*/
+.stats span { color: #a6a6a6}
+.stat { 
+    display:inline;
+    animation: 2s projectNumber infinite;
+}
+@keyframes projectNumber { 
+    0% { color: green}
+    100% { color: var(--purple)}
+}
+#skillsPic img{ 
+    height: 40px; width: 40px;
+    padding: 5px;
+}
+/*========Inside Project Div=========*/
+.projectItem { 
+    width: 90%;
+    margin: 10px auto;
+    padding: 5px;
+    background-color: var(--fadeblack);
+    border-radius: 10px;
+}
+.projectItem img { 
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    object-position: 15% 30%;
+    border-radius: inherit;
+    transition: 0.7s;
+}
+.projectItem img:hover { 
+    object-position: 30% 15%;
+}
+.hire { 
+    text-align: center;
+}
+
+.reason .material-icons { 
+    font-size: 20px;
+}
+
+
+/*========Inside Contactt Div=========*/
+.contact { 
+    text-align: center;
+    background-color: var(--purple);
+}
+.contact .bi { 
+    margin: 5%;
+    padding: 15px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+.contact .transbtn { 
+    border: 1px solid white;
+}
+
+
+
+
+/*========MOBILE VIEW=========*/
+@media screen and (max-width: 480px){ 
+    #statPic { display: none;}
+    .contact { margin-top: 10px}
+}
+
+@media screen and (min-width: 600px) { 
+    .contentMargin { 
+        margin: 7% 7%;
+    }
+    .panel { 
+        padding: 30px;
+        border-radius: 30px;
+    }
+    .panel, .projectFlex { 
+        margin-bottom: 7%;
+    }
+    #welcome { 
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    #profilePic { 
+        width: 280px; height: 280px;
+    }
+    @keyframes roll { 
+    0% { 
+        transform: translate(-300%, 0%) rotate(180deg);
+       }
+    100% {
+        transform: translate(0%, 0%) rotate(0deg);
+        }   
+    }
+    #welcomeText {animation: 3s textFly }
+    @keyframes textFly {
+        0% { transform: translate(-200%, 0%)}
+        33% { transform: translate(-200%, 0%)}
+        100% { transform: translate(0%, 0%)}
+    }
+    .stats { 
+        display: flex;
+        height: 380px;
+    }
+    #statPic-container { width: 30%}
+    #statPic { 
+        height:100%;
+        width: 100%;
+    }
+    #statText { 
+        padding-left: 20px;
+    }
+    .projectFlex { 
+        display:flex;
+        flex-wrap: wrap;
+    }
+    .projectItem { 
+        width: 45%;
+    }
+    
+    #reasons { 
+        display: flex;
+    }
+    .reason { 
+        width: calc(100% / 4);
+        padding: 10px;
+    }
+    
+}
