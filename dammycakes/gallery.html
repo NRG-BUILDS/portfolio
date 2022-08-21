@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" dammy_cakes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sofia&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/gallery.css">
+    <title>Dammy's Cake Gallery</title>
+</head>
+
+<body>
+<!-- Navigation Menu -->
+<div id="nav">
+    <!-- Close Button For Mobile -->
+<span class="closebtn" href="javascript:void(0)" onclick="closenav()"><span class="material-icons">close</span></span>  
+<!-- Close Button For PC --><span class="closebtnpc" onclick="closenav()"><span class="material-icons">left</span></span>
+
+<a href="/index.html">Home</a>
+<a href="./dammycakes/about.html">About</a>
+<a href="gallery.html">Gallery</a>
+</div>
+
+<div class="header">
+ <!-- Open Nav Button For Mobile & PC -->
+<span class="navbtn" onclick="opennav()"><span class="material-icons">menu</span></span>  <span class="navbtnpc" onclick="opennavpc()"><span class="material-icons">right</span></span>
+<!-- Darkmode button -->
+<button class="founderbtn" onclick="darkmode()" style="float:right; color#660066;font-size:inherit"><span class="material-icons">dark_mode</span></button>
+<span>Dammy's Cake World</span>
+</div>
+
+<h2>Bread</h2>
+ <img id="main" src="/gallery_pics/bread1.jpg">
+<div class="flexpics">
+     <img src="/bread.jpg">
+    <img src="/gallery_pics/bread2.jpg">
+     <img src="/gallery_pics/bread3.jpg">
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+function darkmode() {
+    var body = document.body;
+    body.classList.toggle('darkmode');
+}
+function opennav() {
+ document.getElementById('nav').style.width = "80%"; 
+ document.getElementById('pushallnav').style.marginLeft = "2%"
+}
+function closenav() {
+document.getElementById('nav').style.width = "0";
+document.getElementById('pushallnav').style.marginLeft ="0";
+}
+function opennavpc() {
+ document.getElementById('nav').style.width = "20%";
+ document.getElementById('pushallnav').style.marginLeft = "20%"
+}
+</script>
+</body>
+
+</html>

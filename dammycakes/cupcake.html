@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+<link rel="stylesheet" href="./dammycakes/order.css"/>
+</head>
+<body>
+
+<img class="main" src="./dammycakes/cupcake.jpg">
+
+<div class="price">
+<h1 id="pastry">Rich Creamy Cupcakes</h1>
+<h3 id="price"></h3>
+<h4>Delivery Fees</h4>
+<p>Within Lagos, Ota (free) <br>Abeokuta, Badagry +₦180 <br> Ibadan, Ogun, Oyo, Akure +₦800</p>
+</div>
+
+<div class="var">
+<h4>OTHER VARIATIONS (Quantity)</h4>
+<button onclick="cc5()">x5</button>
+<button onclick="cc10()">x10</button>
+<button onclick="cc20()">x20</button>
+<button onclick="cc50()">x50</button>
+<button onclick="cc100()">x100</button>
+</div>
+<p>Tasty Details</p>
+
+<div id="desc">
+<h4>Description
+<button onclick="document.getElementById('desc').style.height='100%'">
+<span class="material-icons">
+  expand_more</span></button></h4>
+<br>
+<p>15inch-diameter cakes from Dammy's Cake World bakeries in the heart of Lekki Ajah are popular amongst pastry enthusiasts, party people and anyone out to have a good time.</p>
+<p>What Makes it the Best Vanilla Cake?</p>
+<ol>
+<li>Soft, light crumb from cake flour.</li>
+<li>Fluffy from extra egg whites.</li>
+<li>Buttery and cakey from creamed butter.</li>
+<li>Stick-to-your-fork moist from eggs & buttermilk.</li>
+<li>Extra flavor from pure vanilla extract</li>
+</ol>
+</div>
+
+<p>How Are We Getting It To You?</p>
+
+<div class="var">
+<form action="mailto: emmanuelomolaju964@gmail.com">
+<select name="location">
+<option value="Lagos">Lagos</option>
+<option value="Ota">Ota</option>
+<option value="Ibadan">Ibadan</option>
+<option value="Oyo">Oyo</option>
+<option value="Akure">Akure</option>
+</select><br>
+<input type="date" name="date"/><br>
+<input type="submit" onclick="alert('Done! We will get baking')"/>
+</form>
+</div>
+<script src="./dammycakes/prices.js">
+</script>
+</body>
+</html>
+
