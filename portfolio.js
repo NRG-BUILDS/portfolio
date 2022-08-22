@@ -1,15 +1,32 @@
+//Get Nav menu and button
 let nav = document.getElementById('nav');
 let navBtn = document.getElementById('navbtn');
 
+//Show and close nav menu
 function showNav() { 
         nav.style.height = "100%";
 }
 function closeNav() { 
         nav.style.height = "0%";
 }
+//Create message for "CV" button
 document.getElementById('cvbtn').addEventListener("click", function() {
     document.getElementById('cv').innerHTML = "Still Working On That..."
 })
+
+//Switching between light and dark theme
+function theme() {
+    let body = document.body;
+    let pic = document.getElementById('profilePic');
+    
+    body.classList.toggle('lightmode');
+    if (pic.src.match('./profile_dark.jpg')) {
+        pic.src = "./profile_light.jpg"
+    } else {
+        pic.src = "./profile_dark.jpg"
+    }
+    
+}    
 
 //Creating a Countdown Timer
 

@@ -3,6 +3,15 @@ body {
     background-color: var(--bgblack);
     color: white;
     font-family: 'Lato', sans-serif;
+    transition: 0.5s;
+}
+.lightmode, .lightmode #navbtn, .lightmode .transbtn { 
+    background-color:#ffece6;
+    color:black;
+}
+.lightmode .panel, .lightmode .projectItem { 
+    background-color: coral;
+    color:white;
 }
 html { 
     scroll-behavior: smooth;
@@ -21,6 +30,12 @@ html {
 }
 a { 
     text-decoration:none; color:white;
+}
+#themebtn { 
+    float:right;
+    margin-right:10px;
+    border-radius: 50%;
+    border: none;
 }
 /*==============Nav Bar===============*/
 .navi { 
@@ -138,17 +153,17 @@ button {
 
 
 /*========Inside Contactt Div=========*/
-.contact { 
+#contact { 
     text-align: center;
     background-color: var(--purple);
 }
-.contact .bi { 
+#contact .bi { 
     margin: 5%;
     padding: 15px;
     border-radius: 50%;
     border: 2px solid white;
 }
-.contact .transbtn { 
+#contact .transbtn { 
     border: 1px solid white;
 }
 
@@ -197,11 +212,16 @@ button {
         display: flex;
         height: 380px;
     }
-    #statPic-container { width: 30%}
+    #statPic-container { 
+        width: 30%;
+    }
     #statPic { 
         height:100%;
         width: 100%;
+        border-radius: 10px;
+        filter: saturate(20%);
     }
+    .lightmode #statPic {filter: saturate(100%);}
     #statText { 
         padding-left: 20px;
     }
