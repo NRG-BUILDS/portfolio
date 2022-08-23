@@ -63,6 +63,9 @@ a {
     margin: 10% 0;
     padding: 5%;
 }
+#nav a { 
+    display: block;
+}
 #nav ul { 
     list-style-type: none;
     margin:0; padding: 0;
@@ -77,7 +80,7 @@ a {
     border-radius: 10px;
     padding: 20px;
 }
-button { 
+button, a.purplebtn { 
     padding: 10px;
     border-radius: 5px;
     border: none;
@@ -202,7 +205,9 @@ button {
         transform: translate(0%, 0%) rotate(0deg);
         }   
     }
-    #welcomeText {animation: 3s textFly }
+    #welcomeText {
+        font-size: 15px;
+        animation: 3s textFly }
     @keyframes textFly {
         0% { transform: translate(-200%, 0%)}
         33% { transform: translate(-200%, 0%)}
