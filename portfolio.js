@@ -18,12 +18,16 @@ document.getElementById('cvbtn').addEventListener("click", function() {
 function theme() {
     let body = document.body;
     let pic = document.getElementById('profilePic');
+    let themebtn = document.getElementById('switch')
     
     body.classList.toggle('lightmode');
     if (pic.src.match('./profile_dark.jpg')) {
-        pic.src = "./profile_light.jpg"
+        pic.src = "./profile_light.jpg";
+        themebtn.innerHTML = "light_mode"
+        
     } else {
-        pic.src = "./profile_dark.jpg"
+        pic.src = "./profile_dark.jpg";
+        themebtn.innerHTML = "dark_mode"
     }
     
 }    
