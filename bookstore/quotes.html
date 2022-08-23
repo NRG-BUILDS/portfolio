@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Crack-Open Daily Quotes</title>
+</head>
+
+<body>
+    <button id="login" onclick="show_modal()"><span class="material-icons">account_circle</span></button>
+    
+    <div id="modal">
+    <div id="logoModal">
+        <h2>Hi there friend, shopping is easier if we know our customers</h2>
+    </div>    
+        <input type="text" placeholder="Username" id="username"><br>
+        <input type="email" placeholder="Email Address" id="usermail"><br>
+        <button id="signbtn" onclick="create_user()">Sign Up</button>
+        <button id="closebtn" onclick="close_modal()">Cancel</button>    
+    </div>
+    <div id="intro">
+        <div class="quote">
+        <p>Quote Of The Day</p>
+        <blockquote>“<br>
+            I don't move with the Crowd, I run with the Clouds.<br>”
+        </blockquote>
+        <p>—Emmanuel O.</p>
+        </div>
+    </div>
+    
+    <div id="logo">
+       <h2>Crack Open: Daily Quotes</h2>
+       <span id="name"></span>
+    </div>
+    <div id="content">
+        <h3>Other Quotes From The Week...</h3>
+        <div class="quote-cont">
+        <div class="info">
+            <blockquote>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </blockquote>
+            <p>—Author.</p>
+        </div>
+        <div class="info">
+            <blockquote>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </blockquote>
+            <p>—Author.</p>
+        </div>
+        <div class="info">
+            <blockquote>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </blockquote>
+            <p>—Author.</p>
+        </div>
+        <div class="info">
+            <blockquote>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </blockquote>
+            <p>—Author.</p>
+        </div>
+        </div>
+        
+    </div>
+    <div class="footer">
+        <h3 style="background-color:orange; padding: 10px; margin:0"=>SUBSCRIBE TO OUR NEWSLETTER</h3>
+        <form>
+            <input type="email" name="newsletter-email" placeholder="@youremail">
+            <input type="submit" value="Subscribe">
+        </form><br>
+        <a>Contact Us</a><br>
+        <a>About</a><br>
+        <a>Site Credits ©Built With NRG</a><br<a></a><br>
+    </div>
+ <div id="nav">
+        <a href="bookstore.html"><span class="material-icons">home</span></a>
+        <a href="javascript:void(0)" onclick="gotop()"><span class="material-icons">search</span></a>
+        <a href="quotes.html"><span class="material-icons">auto_stories</span></a>
+        <a href="cart.html"><span class="material-icons">shopping_cart</span></a>
+    </div>
+    
+<script src="home.js"></script>    
+</body>    
+</html>

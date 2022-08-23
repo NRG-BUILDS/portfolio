@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <title>The Bookstore</title>
+</head>
+
+
+
+<body>
+    <button id="login" onclick="show_modal()"><span class="material-icons">account_circle</span></button>
+    
+    <div id="modal">
+        <div id="logoModal">
+            <h2>Hi there friend, shopping is easier if we know our customers</h2>
+        </div>    
+        <input type="text" placeholder="Username" id="username" required><br>
+        <input type="email" placeholder="Email Address" id="usermail" required><br>
+        <button id="signbtn" onclick="create_user()">Sign Up</button>
+        <button id="closebtn" onclick="close_modal()">Cancel</button>    
+    </div>
+        <div id="intro">
+        
+            <h1>Crack Open</h1>
+            <p>The Largest Kids book Library On The Web</p>
+
+    <form action=page_h.php>
+     <input list="shelf" placeholder="Chase The Clouds...">
+      <datalist id="shelf">
+        <option value="Ben Briver And The Incredible Exploding Kid">
+        <option value="The Crowned Kids">
+        <option value="Diary Of A Wimpy Kid: The Gateway">
+        <option value="The Girl Afraid Of The Mirrors">
+        <option value="Is Light The Enemy?">
+     </datalist>
+   <input type="submit" value="Search">
+  </form>
+  
+</div>
+<div id="logo">
+       <h2>Crack Open</h2>
+       <span id="name"></span>
+    </div>
+    
+<div id="content">
+    
+    <div class="book">
+        <img src="book.jpg" alt="Ben River:IEK">
+    </div>
+    <div class="info">
+        <h3>Ben Briver and the Incredible Exploding Kid</h3>
+        <span>Matthew Hegder</span><br>
+        <p class="price">$12.99</p>
+    </div>
+    <a href=”./view.html”><div class="book"></a>
+        <img src="book.jpg" alt="Ben River:IEK">
+    </div>
+    <div class="info">
+        <h3>The Crowned Kids</h3>
+        <span>Matthew Hegder</span><br>
+        <p class="price">$12.99</p>
+    </div>
+    <a href=”./view.html”><div class="book"></a>
+        <img src="book.jpg" alt="Ben River:IEK">
+    </div>
+    <div class="info">
+        <h3>Is Light The Enemy?</h3>
+        <span>Joy Adebule</span><br>
+        <p class="price">$12.99</p>
+    </div>
+    <a href=”./view.html”><div class="book"></a>
+        <img src="book.jpg" alt="Ben River:IEK">
+    </div>
+    <div class="info">
+        <h3>Diary Of A Wimpy Kid: The Gateway</h3>
+        <span>Matthew Hegder</span><br>
+        <p class="price">$12.99</p>
+    </div>
+    <a href=”./view.html”><div class="book"></a>
+        <img src="book.jpg" alt="Ben River:IEK">
+    </div>
+    <div class="info">
+        <h3>The Girl Afraid Of The Mirrors</h3>
+        <span>Joy Adebule</span><br>
+        <p class="price">$12.99</p>
+    </div>
+    <a href=”./view.html”><div class="book"></a>
+        <img src="book.jpg" alt="Ben River:IEK">
+    </div>
+    <div class="info">
+        <h3>Ben River and the Incredible Exploding Kid</h3>
+        <span>Matthew Hegder</span><br>
+        <p class="price">$12.99</p>
+    </div>
+    <a href=”./view.html”><div class="book"></a>
+        <img src="book.jpg" alt="Ben River:IEK">
+    </div>
+    <div class="info">
+        <h3>Ben River and the Incredible Exploding Kid</h3>
+        <span>Matthew Hegder</span><br>
+        <p class="price">$12.99</p>
+    </div>
+    
+    <a href=”./view.html”><div class="book"></a>
+        <img src="book.jpg" alt="Ben River:IEK">
+    </div>
+    
+    <!--This last div is for practice using JS objects construction-->
+    <div class="info">
+        <h3 id="t6"></h3>
+        <span id="a6"></span><br>
+        <p class="price" id="p6"></p>
+    </div>
+    
+    
+</div>
+<div class="footer">
+        <h3 style="background-color:orange; padding: 10px; margin:0"=>SUBSCRIBE TO OUR NEWSLETTER</h3>
+        <form>
+            <input type="email" name="newsletter-email" placeholder="@youremail">
+            <input type="submit" value="Subscribe">
+        </form><br>
+        <a>Contact Us</a><br>
+        <a>About</a><br>
+        <a>Site Credits ©Built With NRG</a><br<a></a><br>
+    </div>
+ <div id="nav">
+        <a href="bookstore.html" selected><span class="material-icons">home</span></a>
+        <a href="javascript:void(0)" onclick="gotop()"><span class="material-icons">search</span></a>
+        <a href="quotes.html"><span class="material-icons">auto_stories</span></a>
+        <a href="cart.html"><span class="material-icons">shopping_cart</span></a>
+    </div>
+<script src="/home.js"></script>
+</body>
+
+</html>
