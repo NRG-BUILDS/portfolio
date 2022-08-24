@@ -1,0 +1,129 @@
+body {
+    margin:0;
+    background-color:#f2f2f2;
+ }
+h1, h2 {
+    font-weight:350;
+    
+}
+a {text-decoration:none; color: inherit}
+
+#navbtn, button {
+    font-size:19px;
+    background-color:white;
+    padding:5px;
+    border-radius: 3px;
+    float: right;
+    transition:0.4s;
+    border: none;
+}
+#navbar {
+    display: none;
+    transform: translate(-43%, 180%) rotate(-90deg);
+    background-color:orange;
+    padding: 25px;
+    color:white;
+    z-index:3;
+    border-radius: 0 0 0 30px;
+    font-size:12px;
+}
+#navbar a {
+    margin: 0 5px;
+}
+#pushall {transition: 0.5s}
+.header {
+    padding: 15px 10px;
+    
+}
+.header h1 {
+    display: inline;
+}
+#menu a {
+    box-sizing: border-box;
+    display:inline-block;
+    background-color:white;
+    border-radius: 10px;
+    margin: 10px;
+    font-size: 15pt;
+    padding: 3%;
+    transition: 0.2s;
+}
+#menu a:hover {
+    background-color: orange;
+    padding:4%;
+}
+#highlight {
+    box-sizing:border-box;
+    display: flex;
+    align-items:center;
+    width:100%;
+    height: 30%;
+    overflow: auto;
+    padding-bottom: 40px;
+}
+#highlight div {
+    position:relative;
+    margin: 10px;
+}
+#highlight img {
+    width:150px;
+    height:200px;
+    border-radius:10px;
+    transition: 0.4s;
+}
+#highlight img:hover {
+    width: 180px;
+    height: 240px;
+}
+.tag {
+    position: absolute;
+    bottom: 3px;
+    left: 3px;
+    color:white;
+    font-weight: 500;
+}
+#subs {
+    box-sizing:border-box;
+        display:flex;
+        width: 100%;
+        height: 200px;
+        overflow:auto;
+        padding: 8px 0 50px 10px;
+        margin: 5% 0;
+    }
+    .sub {
+        box-sizing: border-box;
+        border-radius: 5px;
+        box-shadow: 0 4px 4px #ccc;
+        background-color: white;
+        margin: 8px;
+        font-size:10pt;
+        padding: 6px;
+        height:90px;
+        width:240px;
+     
+    }
+    #subpic {
+        width:auto;
+        height:100%;
+        float:left;
+        border-radius: 5px;
+        padding-right: 4px;
+    }
+.subname {
+      font-weight:bolder;
+    }
+#price {
+    font-weight:bolder;
+    padding: 3px 0;
+}
+footer { 
+    background-color:green;
+    text-align: center;
+    color:white;
+    margin: 0;
+    padding: 5px;
+}
+.cite { 
+    color: yellow;
+}
