@@ -12,15 +12,19 @@
 </head>
 
 <body>
-<!--========NAVIGATION BAR==========-->    <div>
+<!--========NAVIGATION BAR==========-->
+    <!--Nav hamburger button-->
+    <div class="topNav">
         <a class="navi" id="navbtn" href="javascript:void(0)" onclick="showNav()">&#9776;</a>
         <button class="transbtn" id= "themebtn" onclick="theme()"><span id="switch" class="material-icons">dark_mode</span></button>
     </div>
+    
+        <!--Nav menu slide-in-->
     <div id="nav">
         <ul>
         <li><span id="logo">NRG</span></li>
         
-        <li><a class="navi" href="javascript:void(0)" onclick="closeNav()">&times;</a></li>
+        <li><a style="font-size: 30px " href="javascript:void(0)" onclick="closeNav()">&times;</a></li>
         
         <hr>
         <li class="selected"><a href="./index.html">Home</a></li>
@@ -28,7 +32,8 @@
         
         <li><a href="#">Services</a></li>
         <li><a href="#contact" onclick="closeNav()">Contact</a></li>
-        </ul>
+        <span>© Emmanuel Omolaju(NRG) 2022</span>
+        </ul>     <!-- End of Na-->
     </div>
     
 <!--=====WELCOME TEXT AND PICTURE===-->  

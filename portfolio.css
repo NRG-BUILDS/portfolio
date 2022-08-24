@@ -5,14 +5,7 @@ body {
     font-family: 'Lato', sans-serif;
     transition: 0.5s;
 }
-.lightmode, .lightmode #navbtn, .lightmode .transbtn { 
-    background-color:#ffece6;
-    color:black;
-}
-.lightmode .panel, .lightmode .projectItem { 
-    background-color: coral;
-    color:white;
-}
+
 html { 
     scroll-behavior: smooth;
 }
@@ -28,19 +21,38 @@ html {
     --fadeblack: #333333;
     --purple: #8533ff
 }
+.lightmode .panel, 
+.lightmode .projectItem,
+button:hover
+{ 
+    background-color: coral;
+    color:white;
+}
+.lightmode, 
+.lightmode #navbtn, 
+.lightmode .transbtn { 
+    background-color:#ffece6;
+    color:black;
+}
 a { 
     text-decoration:none; color:white;
 }
 #themebtn { 
     float:right;
-    margin-right:10px;
     border-radius: 50%;
     border: none;
 }
 /*==============Nav Bar===============*/
-.navi { 
+.topNav { 
+    text-align: center;
+    width: 90%;
+    margin:0 auto 25% auto;
     font-size: 30px;
-    margin: 10px;
+    border:1px solid var(--bgblack);
+    font-size: 30px;
+}
+.navi { 
+    float:left;
 }
 #nav { 
     text-align: center;
@@ -79,13 +91,18 @@ a {
     background-color: var(--fadeblack);
     border-radius: 10px;
     padding: 20px;
+    transition: 0.2s;
 }
+.panel, .projectFlex { 
+        margin-bottom: 7%;
+    }
 button, a.purplebtn { 
     padding: 10px;
     border-radius: 5px;
     border: none;
     font-size: 14px;
     color: white;
+    transition: 0.3s;
 }
 .purplebtn { 
     background-color: var(--purple);
@@ -111,7 +128,8 @@ button, a.purplebtn {
     }   
 }
 #welcome { 
-    margin: 15% 0;
+    margin: 5% 0;
+   
 }
 /*==========Inside Stats Div===========*/
 .stats span { color: #a6a6a6}
@@ -159,6 +177,7 @@ button, a.purplebtn {
 #contact { 
     text-align: center;
     background-color: var(--purple);
+    animation: contactBg 5s infinite;
 }
 #contact .bi { 
     margin: 5%;
@@ -169,7 +188,12 @@ button, a.purplebtn {
 #contact .transbtn { 
     border: 1px solid white;
 }
-
+@keyframes contactBg { 
+   25% { background-color: green}
+   50% { background-color: coral}
+   75% {background-color: black}
+   100% { background-color: var(--purple)}
+}
 
 
 
@@ -179,7 +203,10 @@ button, a.purplebtn {
     .contact { margin-top: 10px}
 }
 
-@media screen and (min-width: 600px) { 
+@media screen and (min-width: 600px) {
+    .topNav { 
+    margin:0 auto 15% auto;
+}
     .contentMargin { 
         margin: 7% 7%;
     }
