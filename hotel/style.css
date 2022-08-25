@@ -1,0 +1,286 @@
+:root { 
+    --orange: #ff751a;
+    --paleOrange: #ffe0cc;
+    
+}
+body {
+    margin: 0;
+}
+* {
+    box-sizing:border-box;
+}
+.main {
+    background-color: #474785;
+    background-image: url('./main.jpg');
+    color:white;
+    background-size: cover;
+    z-index: -1;
+}
+#nav { 
+    float:right;
+}
+#nav a{ 
+    font-size: 10px;
+}
+a {text-decoration:none; color:inherit}
+#mainHeader {
+    font-size:18px;
+    padding: 15% 20%;
+    text-align:center;
+}
+button, input[type=submit] {
+    font-size: 13px;
+    padding: 8px 12px;
+    border: 1px solid var(--orange);
+    border-radius: 5px;
+    transition: 0.2s;
+}
+input { 
+    background-color:inherit;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+input:focus { 
+    background-color: var(--paleOrange);
+    border: 2px solid var(--orange);
+    outline: none;
+}
+.orange, .white:hover { 
+    background-color:var(--orange); 
+    color:white
+    
+}
+.white, .orange:hover {
+    color: black;
+    background-color: transparent;
+    border: 2px solid var(--orange);
+}
+#bookTile { 
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    background-color: white;
+    border-radius:5px;
+    box-shadow: 1px 3px 3px #ccc;
+    transform: translateY(-40px);
+    
+}
+#bookTile div{ 
+    float:left;
+    padding:10px;
+    font-size:15px;
+    width: 20%;
+    margin:auto;
+}
+#bookTile input { 
+    width: 100%;
+}
+#content { 
+    padding: 0 1%;
+}
+.infoPic { 
+    text-align: center;
+    width: 90%;
+    height: 220px;
+    border-radius: 2%;
+    object-fit: cover;
+    transition: 0.4s;
+}
+.infoText p:first-child { 
+    color: var(--orange);
+    font-weight: 800;
+}
+.infoText { 
+    padding: 20px 0px;
+    line-height: 1.5;
+    font-size: 14px;
+}
+.infoText h2 { 
+    line-height: 1;
+    font-size: 28px;
+}
+.galleryMain, .subPic { 
+    position: relative;
+    filter: brightness(90%);
+    object-fit:fill;
+}
+.caption {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    color: white;
+}
+.greybox, .whitebox { 
+    border-radius: 10px;
+    text-align:center;
+}
+.greybox { 
+    background-color: #f2f2f2;
+}
+.whitebox { box-shadow: 0 5px 5px #ccc}
+.service { 
+    font-size: 30px;
+}
+.roomFlex { 
+    display: flex;
+    width: 100%;
+    height: 500px;
+    overflow: auto;
+    align-items: baseline;
+}
+.roomPic { 
+    position: relative;
+}
+.price { 
+    position: absolute;
+    bottom: -10px;
+    right: 40px;  /*Price Tag Position*/
+}
+footer p, .rights { 
+    font-weight: 300;
+    font-size: 15px;
+}
+    
+/*{{{{{{{{MOBILE VIEW}}}}}}}}*/    
+
+@media screen and (max-width: 580px) {
+    #aboutFlex, #aboutFlex2 { 
+        padding: 5px;
+        margin: 7px 5px;
+        box-shadow: 0 4px 8px #ccc;
+        border-radius: 10px;
+        text-align:center;
+        transition: 0.4s;
+    }
+    #aboutFlex:hover, #aboutFlex2:hover {
+        box-shadow: 0 8px 4px var(--orange);
+    }
+    #aboutFlex:hover .infoPic, #aboutFlex2:hover .infoPic {
+        width:100%
+    }
+    .galleryFlex { 
+        display:flex;
+        width: 100%;
+        overflow: auto;
+    }
+    .galleryMain img, .subPic img { 
+        width: 240px;
+        height:180px;
+        margin: 3px;
+        border-radius: 4px;
+    }
+    .greybox, .whitebox { 
+        width: 80%;
+        margin:15px auto;
+        padding: 10%;
+    }
+    .roomPic img {
+        width: 240px;
+        height: 320px;
+        border-radius: 5px;
+        margin-right: 10px;
+        object-fit: cover;
+        transition: 0.4s ease-in;
+    }
+    .roomPic img:hover { 
+        width:420px;
+    }
+    .testimonial {
+        text-align: center;
+        margin: auto;
+    }
+    footer div, .rights { 
+        text-align: center;
+        padding: 4% 7%;
+    }
+    
+}
+
+/*{{{{{{{{{{{{{{PC VIEW}}}}}}}}}}}}}}*/
+
+@media screen and (min-width: 600px) { 
+    #nav a {
+        font-size: 15px;
+        padding: 20px;
+    }
+    #content { 
+        margin: 0 2%;
+    }
+    #aboutFlex, #aboutFlex2 { 
+    display:flex;
+    padding: 5% 1%;
+    }
+    .infoText { 
+        margin: 0 15px;
+    }
+    #aboutFlex2 {
+        flex-direction: row-reverse;
+    }
+    .infoPic { 
+        width: 500px;
+        height: 350px;
+        
+    }
+    /* This block for gallery class*/
+    .galleryFlex { 
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 50% 25% 25%;
+        grid-template-rows: 150px 150px;
+        gap: 30px;
+        margin: inherit;
+        
+      
+    }
+    .galleryMain {
+        grid-area: 1 / 1 / 3 / 2;
+        width: 100%;
+        height:100%;
+        border-radius: 10px;
+    }
+    .subPic img, .galleryMain img { 
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        
+    }
+    .s1 { grid-area: 1/ 2 / 2 / 3}
+    .s2 { grid-area: 1/ 3 / 2 / 4}
+    .s3 { grid-area: 2 / 2 / 3 / 3}
+    .s4 { grid-area: 2 / 3 / 3 / 4}
+    /*End Of Gallery Section*/
+    
+    .greyboxFlex { 
+        display:flex;
+        width:100%;
+        justify-content: center;
+    }
+    .greybox, .whitebox { 
+        width: 80%;
+        margin:50px 3%;
+        padding: 5%;
+    }
+    .roomFlex { 
+        justify-content: center; 
+    }
+    .roomPic img {
+        width: 270px;
+        height: 360px;
+        border-radius: 15px;
+        margin-right: 30px;
+        object-fit: cover;
+        transition: 0.4s ease-out;
+    }
+    .roomPic img:hover { 
+        width:480px;
+    }
+    footer { 
+        display:flex;
+    }
+    footer div{ 
+        width:25%;
+        padding: 4%;
+    }
+    .rights { text-align:center}
+}
