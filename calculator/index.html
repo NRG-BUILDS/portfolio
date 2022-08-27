@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="calculator.css">
+    <title></title>
+</head>
+
+<body>
+    
+    <div class="display">
+        
+        <div class="textarea">
+            <span id="text"></span>
+        </div>
+        <div class="result">
+            <p id="result"></p>
+        </div>
+        <div id="overlay"></div>
+    </div>
+    
+    
+    <div class="keypad">
+        <div class="button key">
+            <button id="clear">C</button>
+        </div>
+        <div class="button key">
+            <button id="divide" onclick="divide()">÷</button>
+        </div>
+        <div class="button key">
+            <button id="multiply" onclick=multiply()>×</button>
+        </div>
+        <div class="button key del">
+            <button id="del" onclick="del()">DEL</button>
+        </div>
+        <div class="button key subtract">
+            <button id="subtract" onclick="subtract()">–</button>
+        </div>
+        <div class="button key add">
+            <button id="add" onclick="add()">+</button>
+        </div>
+        <div class="button key equals">
+            <button id="equals" onclick ="equal()">=</button>
+        </div>
+        
+        
+        
+        
+        
+        <div class="button">
+            <button id="b7" onclick="buttonAction(7)">7</button>
+        </div>
+        <div class="button">
+            <button id="b8" onclick="buttonAction(8)">8</button>
+        </div>
+        <div class="button">
+            <button id="b9" onclick="buttonAction(9)">9</button>
+        </div>
+        <div class="button">
+            <button id="b4" onclick="buttonAction(4)">4</button>
+        </div>
+        <div class="button">
+            <button id="b5" onclick="buttonAction(5)">5</button>
+        </div>
+        <div class="button">
+            <button id="b6" onclick="buttonAction(6)">6</button>
+        </div>
+        <div class="button">
+            <button id="b1" onclick="buttonAction(1)">1</button>
+        </div>
+        <div class="button">
+            <button id="b2" onclick="buttonAction(2)">2</button>
+        </div>
+        <div class="button">
+            <button id="b3" onclick="buttonAction(3)">3</button>
+        </div>
+        <div class="button">
+            <button id="bPercent" onclick=percent()>%</button>
+        </div>
+        <div class="button">
+            <button id="b0" onclick="buttonAction(0)">0</button>
+        </div>
+        <div class="button">
+            <button id="bDecimal">.</button>
+        </div>
+    </div>
+    
+    
+    <!--Theme Button and Links-->
+    <div id="theme-container">
+        <button onclick="theme()">
+            <span class="material-icons" id="switch">dark_mode</span></button>
+    </div>
+    <div class="more">
+        <h1>More Emmaculators</h1>
+        <a href="physics.html">A physics calculator &UpperRightArrow;</a>
+    </div>
+    
+
+
+<script src="calculator.js"></script>
+</body>
+
+</html>

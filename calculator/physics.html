@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>My Calculator</title>
+  
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="body">
+    <header>
+        <h1>Emma<span>Cu</span>lat<span>or</span></h1>
+    </header>
+  <p>Nothing to see here...</p>
+  <p>Just a regular Physics Calculator</p>
+  <br>
+  <br>
+  <div class="d1">
+  <p>Enter value: <input type="number" id="value"></p>
+ <p>The square of <span id ="number">your number</span> is: <span id="answer"></span></p><br>
+  <button id="equals">Check Answer</button>
+  </div>
+  <div class="d1">
+  <p>Add <input type="number" id="A"> + <input type="number" id="B"></p>
+  <button id="add">Add</button>
+  <p> Your Answer is: <span id="result"></span>
+  </div>
+  <h1>Motion Formulas</h1>
+  <div class="d2">
+      <div class="var">
+      <p>Provide Initial Speed(m/s):<br>
+      <input type="number" id="speed"></p>
+      <p>Provide Time Taken(s):<br>
+      <input type="number" id="time"></p>
+      <p>Provide Acceleration(m/s²):<br>
+      <input type="number" id="accl"></p>
+      </div>
+      <p>The Final Velocity Is Probably:<br><span id="velocity"></span></p>
+      <button id="run">Run</button>
+     
+  </div>
+  <div class="d2">
+      <div class="var">
+      <p>Provide Initial Speed(m/s):<br>
+      <input id="speedS" type="number"></p>
+      <p>Provide Acceleration(m/s²):<br>
+      <input id="acclS" type="number"></p>
+      <p>Provide Time Taken:<br>
+      <input id="timeS" type="number"></p>
+      </div>
+      <p>The Distance Traveled will be:<br>
+      <span id="distance"></span><br></p>
+      <button id="getDistance">Get Distance</button>
+  </div>
+  <h1>Electricity Equation</h1>
+
+  <div class="d2">
+      <div class="var">
+
+      <p>Voltage (Potential Difference):<br>
+      <input type="number" id="volt"></p>
+      <p>Current (I):<br>
+      <input type="number" id="current"></p>
+      <p>Resistance:<br>
+      <input type="number" id="resist"></p>
+      </div>
+          <p>You can Supply 2 values to get the third</p>
+      <button id="elect">Start</button>
+  </div>
+    <br>
+  <!-- Project -->
+  <script src="main.js"></script>
+</body>
+</html>
