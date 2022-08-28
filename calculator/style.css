@@ -1,6 +1,6 @@
 body {
     font-size: 12pt;
-    background: linear-gradient(to right, #34A853, #55ACEE);
+    background: linear-gradient(to left, #bcdef6, #c4edd0);
     font-family: Arial, sans-serif;
 }
 header {
@@ -42,15 +42,26 @@ darkmode {
 .d2 {
     padding:0px;
     opacity:1;
-    background-color: white;
     text-align: center;
     z-index: 1;
 }
 .var {
-    background-color: #003399;
+    background: white;
     border-radius: 20px 20px 0 0;
     padding: 25px;
+    transition: 0.6s;
+    
+}
+.var:hover, button:hover { 
+    background-image: linear-gradient(45deg, #34A853, #55ACEE, red);
+    background-size: 600% 100%;
     color: white;
+    animation: 2s variableColor infinite;
+    animation-direction: alternate;
+}
+@keyframes variableColor { 
+    0% { background-position: 0%}
+    100% { background-position:100%;}
 }
 p {
     font-weight: 450;
@@ -63,7 +74,7 @@ input {
     box-sizing: border-box;
     padding:10px;
     width: 20%;
-    border-radius:8px;
+    border-radius:16px;
     border: none;
     border-bottom: 2px solid  #55ACEE;
     transition: 0.2s;
@@ -77,4 +88,5 @@ button {
     font-size: 10pt;
     color: white;
     padding: 10px;
+    width: 90px;
 }
