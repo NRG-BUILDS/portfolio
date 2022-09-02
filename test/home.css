@@ -126,11 +126,11 @@ p {
 #nav a { 
     display: block;
 }
-#nav>ul { 
+#nav ul { 
     list-style-type: none;
     margin:0; padding: 0;
 }
-.selected, li:active { 
+.selected, #nav li:active { 
     background-color: coral;
 }
 #service { 
@@ -158,11 +158,10 @@ p {
 .intro h1 { 
     font-size: 35px;
 }
-p.tag { 
+.tag { 
     font-weight: 500;
     color: var(--orange);
-    font-size: 18px
-}
+} p.tag { font-size: 18px}
 /*"""""""CONTENT SECTION"""""""*/
 
 #content { 
@@ -205,16 +204,17 @@ p.tag {
     color:white;
     margin-top: -2%;
 }
+.panelImg_container { overflow: hidden;}
 .panelImg_container img { 
     width: 100%;
     height: 200px;
     object-fit: cover;
-    object-position: 15% 30%;
+    transform: scale(1, 1);
     border-radius: 10px 10px 0 0;
     transition: 0.5s;
 }
 .panel:hover .panelImg_container img { 
-    object-position: 30% 15%;
+    transform: scale(1.3);
 }
 /**"""""""SECTION 3"""""""*/
 .section3 h1 { 
@@ -239,14 +239,14 @@ p.tag {
 }
 
 /*""""""""""""SECTION 5""""""""""""*/
-.section5 { 
+.section5{ 
     text-align: center;
-    background-image: url("cryptobg.jpg");
     background-position: 70% 60%;
     background-size: cover; 
     background-attachment: fixed;
     
 }
+.section5 { background-image: url("cryptobg.jpg");}
 .crPanels { 
     padding-bottom: 10%;
 }
@@ -271,6 +271,25 @@ p.tag {
     color:red;
     font-size: 30px;
 }
+/*""""""""""""SECTION 6""""""""""""*/
+.section6 { 
+    background-image: linear-gradient(45deg, black, var(--blue), var(--orange));
+    background-size: 900% 100%;
+    color: white;
+    padding: 10% 7%;
+    animation: variableColor 5s infinite alternate ;
+}
+.section6 ul { 
+    margin: 4% auto;
+    font-size: 18px;
+    font-weight: 600;
+    list-style-type: circle;
+}
+.section6 ul>li { 
+    margin: 8px auto;
+}
+/*""""""""""""""FOOTER""""""""""""""*/
+
 footer { 
     background-color: #000d33;
     padding: 5%;
@@ -280,6 +299,7 @@ footer {
 }
 .social-media { 
     text-align: center;
+    display: flex;
     margin: 20% auto;
 }
 .social-media a { 
@@ -289,7 +309,12 @@ footer {
     border: 1px solid var(--orange);
     margin: auto 3%;
 }
+
+
+
 @media screen and (min-width: 600px) {
+    
+    .menuLogo_container { width: 20%}
     #content { 
         padding-top: 0%;
     }
