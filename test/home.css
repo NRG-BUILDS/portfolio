@@ -226,7 +226,7 @@ p {
     text-align: center;
 }
 .section3 { 
-    background-color:white;
+
     background-image: url('section2_bg.jpg');
     background-position: 90% 10%;
 }
@@ -254,7 +254,7 @@ p {
     
 }
 .section5 { 
-    background-color: var(--orange);
+    backgrou
     background-image: url("cryptobg.jpg");
     background-position: 70% 60%;
     text-align: center;
