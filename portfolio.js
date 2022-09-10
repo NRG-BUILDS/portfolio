@@ -1,3 +1,8 @@
+window.addEventListener("scroll", reveal);
+window.addEventListener("scroll", swoop);
+// To check the scroll position on page load
+reveal();
+
 //Get Nav menu and button
 let nav = document.getElementById('nav');
 let navBtn = document.getElementById('navbtn');
@@ -64,4 +69,42 @@ var x = setInterval(function() {
 }, 1000);
 
 
+
+function reveal() {
+  var reveals = document.querySelectorAll(".panel");
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+  var reveals = document.querySelectorAll('.projectItem');
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+function swoop() {
+  let swoops = document.querySelectorAll(".swoop");
+  for (let i = 0; i < swoops.length; i++) {
+    let windowHeight = window.innerHeight;
+    let elementTop = swoops[i].getBoundingClientRect().top;
+    let elementVisible = 150;
+    if (elementTop < windowHeight - elementVisible) {
+      swoops[i].classList.add("active");
+    } else {
+      swoops[i].classList.remove("active");
+    }
+  }
+ } 
 
