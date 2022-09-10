@@ -91,11 +91,21 @@ a {
     background-color: var(--fadeblack);
     border-radius: 10px;
     padding: 20px;
-    transition: 0.2s;
+    
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+    
 }
 .panel, .projectFlex { 
         margin-bottom: 7%;
-    }
+}
+.panel.active, .projectItem.active { 
+    transform: translateY(0);
+    opacity: 1;
+}
+    
 button, a.purplebtn { 
     padding: 10px;
     border-radius: 5px;
@@ -152,6 +162,9 @@ button, a.purplebtn {
     padding: 5px;
     background-color: var(--fadeblack);
     border-radius: 10px;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
 }
 .projectItem img { 
     width: 100%;
@@ -171,7 +184,16 @@ button, a.purplebtn {
 .reason .material-icons { 
     font-size: 20px;
 }
-
+.swoop { 
+    position: relative;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: 1s all ease 0.5s;
+}
+.swoop.active { 
+    transform: translateX(0);
+    opacity: 1;
+}
 
 /*========Inside Contactt Div=========*/
 #contact { 
