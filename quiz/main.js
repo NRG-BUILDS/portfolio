@@ -155,7 +155,7 @@ function getResults() {
         <h1>${counter}/${questionArray.length}</h1>
         <p>As for answers...</p>
         ${showAnswers()}
-        <a href="/"><button>Retry</button></a>`
+        <a href="/quiz"><button>Retry</button></a>`
 }
 
 function showAnswers() {
