@@ -18,7 +18,15 @@ body {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
-.welcome button {
+.welcome input { 
+    padding: 10px;
+    margin: 10px auto;
+    background-color: transparent;
+    border: 3px solid lawngreen;
+    border-radius: 20px;
+    outline: none;
+}
+.welcome button, .result_card button {
     border: none;
     padding: 5% 20%;
     border-radius: 15px;
