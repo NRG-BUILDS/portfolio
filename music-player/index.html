@@ -29,7 +29,7 @@
       
     </div>
     <div class="song_title">
-        <h2 id="title">Bandana</h2>
+        <h1 class="swoop" id="title">Bandana</h1>
         <p id="artist">Fireboy</p>
     </div>
   </div>
@@ -59,7 +59,7 @@
         </div>
         <div class="pauseBtn">
             <button class="buttons" onclick="PlayPause()">
-                <i class="fa-solid fa-pause fa-xl"></i>
+                <i id="play_switch" class="fa-solid fa-play fa-xl"></i>
             </button>
         </div>
         <div class="nextBtn">
@@ -71,8 +71,8 @@
       
       <!--volume slider-->
       <div class="slider_container">
-          <button onclick="mute()"> <i class="fa-solid fa-volume-high "></i></button>
-          <input type="range" class="slider" id="volume_slider" max="100" value="100">
+          <button onclick="mute()"> <i id="muteBtn" class="fa-solid fa-volume-xmark"></i></button>
+          <input type="range" class="vol" id="volume_slider" max="100" value="100">
           <output id="volume">100</output>
       </div>
   </div>

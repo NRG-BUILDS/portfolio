@@ -40,14 +40,24 @@ const song3 = new Songs(
 
 //function for Pause & Play Button
 function PlayPause() { 
+    let playBtn = document.getElementById('play_switch');
     if (song.paused === true) {
-        song.play()
-    } else { song.pause() };
+        song.play();
+        playBtn.className = "fa-solid fa-pause fa-xl"
+    } else { 
+        song.pause();
+        playBtn.className = "fa-solid fa-play fa-xl"
+    };
 }
 function mute() { 
-    if(song.muted === true) { 
-        song.muted = false
-    } else { song.muted = true}
+    let muteBtn = document.getElementById('muteBtn');
+    if(song.volume === 0) { 
+        song.volume = 1;
+        muteBtn.className = "fa-solid fa-volume-high"
+    } else { 
+        song.volume = 0;
+        muteBtn.className = "fa-solid fa-volume-xmark"
+    }
 }
 
 let num = 0 //num is the song number in the array
@@ -134,7 +144,7 @@ song.addEventListener('timeupdate', () => {
   seekSlider.value = Math.floor(song.currentTime);
 });
 //volume function
-volumeSlider.addEventListener('input', (e) => {
+volumeSlider.addEventListener('input', function changeVol(e) {
   const value = e.target.value;
   outputContainer.textContent = value;
   song.volume = value / 100;

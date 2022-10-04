@@ -2,8 +2,9 @@ body {
     font-size: 15px;
     margin: 0;
     color: white;
+    font-family: Arial, Helvetica, sans-serif;
     /*background: JS using album art as background image*/
-    backdrop-filter: blur(5px) brightness(60%);
+    backdrop-filter: brightness(40%) blur(20px);
 }
 * { 
     box-sizing: border-box;
@@ -73,7 +74,12 @@ body {
     border-radius: 50%;
     background: url("album_art.jpg") no-repeat center fixed;
     background-size: cover;
-    
+}
+#title { 
+    font-weight: 900;
+}
+#artist { 
+    color: coral;
 }
 @keyframes spin { 
     0% { transform: rotate(0deg)};
@@ -99,7 +105,9 @@ audio {
 }
 .controls { 
     text-align: center;
-    margin: 40px auto;
+    margin: 40px 5px 0 5px;
+    padding: 30px 3px;
+    border-radius: 15px;
 }
 button { 
     background-color: transparent;
@@ -107,12 +115,20 @@ button {
     border:none;
 }
 .buttons { 
-    border: 2px solid #00b300;
+    background-color: white;
+    border: 2px solid white;
     border-radius: 50%;
     padding: 30px;
+    color: black;
+    transition: 0.3s;
+}
+.buttons:active { 
+    background-color: coral;
+    border: 2px solid coral;
+    color: white;
 }
 .buttons_container { 
-    margin: 40px auto;
+    margin: 30px auto;
 }
 /*"""""""""PLAYLIST SECTION"""""""""*/
 
