@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <script src="https://kit.fontawesome.com/dfd5b6faa1.js" crossorigin="anonymous"></script>
+
+  <title>Music Player</title>
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="sliders.css">
+</head>
+
+</body>
+  <div class="head">
+      <div>
+          <a href="javascript:void(0)" onclick="togglePlayer()"><p id="playerBtn">Now Playing</p></a>
+      </div>
+      <div>
+          <a href="javascript:void(0)" onclick="toggleList()"><p id="listBtn" class="active">Playlist</p></a>
+      </div>
+  </div>
+  <div class="player_section">
+  <div class="album_info">
+    <div class="album_art">
+      
+    </div>
+    <div class="song_title">
+        <h2 id="title">Bandana</h2>
+        <p id="artist">Fireboy</p>
+    </div>
+  </div>
+  <div class="seeker">
+      
+      <audio id="current_song" src="fireboy.mp3" controls preload="metadata">
+      </audio>
+      
+      
+  </div>
+  
+  <div class="controls">
+      <!--Seek slider-->
+      <div class="slider_container">
+          <span id="current_time">0:00</span>
+          <input type="range" class="slider" id="seek_slider" max="100" value="0">
+          <span id="duration">0:00</span>
+      </div>
+      
+      
+      <!--Previous Play And Forward-->
+      <div class="buttons_container swoop" >
+        <div class="prevBtn">
+            <button class="buttons"onclick="prev()">
+                <i class="fa-solid fa-backward fa-lg"></i>
+            </button>
+        </div>
+        <div class="pauseBtn">
+            <button class="buttons" onclick="PlayPause()">
+                <i class="fa-solid fa-pause fa-xl"></i>
+            </button>
+        </div>
+        <div class="nextBtn">
+            <button class="buttons" onclick="next()">
+                <i class="fa-solid fa-forward fa-lg"></i>
+            </button>
+        </div>
+      </div>
+      
+      <!--volume slider-->
+      <div class="slider_container">
+          <button onclick="mute()"> <i class="fa-solid fa-volume-high "></i></button>
+          <input type="range" class="slider" id="volume_slider" max="100" value="100">
+          <output id="volume">100</output>
+      </div>
+  </div>
+</div> <!--End Of Player Section-->
+
+<div class="playlist_section fade">
+    <!--Javascript Generated-->
+</div>
+
+
+  <!-- Project -->
+  <script src="main.js"></script>
+</body>
+</html>
