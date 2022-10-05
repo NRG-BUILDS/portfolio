@@ -62,7 +62,7 @@ body {
 
 
 .album_info { 
-    margin: 20px auto 60px auto;
+    margin: 20px auto 50px auto;
     width: 80%;
     text-align: center;
 }
@@ -139,12 +139,11 @@ button {
     border: 0px solid white;
     border-bottom-width: 1px; 
     display: grid;
-    grid-template-columns: 50px calc(100% - 50px);
+    grid-template-columns: 50px calc(100% - 100px) 50px;
     grid-column-gap: 10px
 }
 .music_item img { 
     width: 100%;
-    
 }
 a { 
     text-decoration: none;

@@ -3,6 +3,7 @@ const song_Source = document.getElementById('songSource')
 const display_pic = document.querySelector('.album_art')
 const display_title = document.querySelector('#title')
 const display_artist = document.querySelector('#artist')
+const download = document.querySelector('#downloadBtn')
 const playlist_display = document.querySelector('.playlist_section')
 const player_display = document.querySelector('.player_section')
 let playlist = [] //array of songs
@@ -64,6 +65,7 @@ let num = 0 //num is the song number in the array
 //shows title, album art and artist
 function showSong() { 
     song.src = playlist[num].src;
+    download.href = playlist[num].src;
     display_title.innerHTML = playlist[num].title;
     display_artist.innerHTML = playlist[num].artist;
     display_pic.style.background = `url(${playlist[num].pic})`;
@@ -167,11 +169,13 @@ function toggleList() {
 //========PLAYLIST SECTION==========
 function playSong(i) { 
     song.src = playlist[i].src;
+    download.href = playlist[i].src;
     song.play();
     display_title.innerHTML = playlist[i].title;
     display_artist.innerHTML = playlist[i].artist;
     display_pic.style.background = `url(${playlist[i].pic})`;
-    document.body.style.background = `url(${playlist[i].pic}) no-repeat center fixed`
+    document.body.style.background = `url(${playlist[i].pic}) no-repeat center fixed`;
+    togglePlayer();
     
 }
 function songList() { 
@@ -179,7 +183,7 @@ function songList() {
     for (i in playlist) { 
         text += `<a href="javascript:void(0)" onclick="playSong(${i})"><div class="music_item">
               <div>
-                <img src=${playlist[i].pic}>
+                <img src="${playlist[i].pic}">
               </div>
               <div>
                 <p>${playlist[i].title}</p>
