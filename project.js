@@ -1,4 +1,9 @@
-function Projects( Name, PicSrc, Src) { 
+const projectArray = []//houses all projects
+
+
+function Projects( Name, PicSrc, Src) {
+    
+    projectArray.push(this)// auto add new project objects to Array
     this.name = Name;
     this.pic = PicSrc;
     this.src = Src;
@@ -20,13 +25,17 @@ const project4 = new Projects(
     "Hotel Landing Page (Mobile and PC)",
     "hotel.jpg",
     "./hotel/")
-const project5 = new Projects(
+const project5 = new Projects( 
+    "Online Music Streaming App",
+    "music.jpg",
+    "./music-player/")    
+const project6 = new Projects(
     "A Bunch Of JavaScript Calculators",
     "calculator.jpg",
     "./calculator/")    
     
     
-const projectArray = [project1, project2, project3, project4, project5];
+//const projectArray = [project1, project2, project3, project4, project5];
 
 let text = ""
 for (i in projectArray) { 
