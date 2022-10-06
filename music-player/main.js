@@ -5,6 +5,7 @@ const display_title = document.querySelector('#title')
 const display_artist = document.querySelector('#artist')
 const download = document.querySelector('#downloadBtn')
 const playlist_display = document.querySelector('.playlist_section')
+const playBtn = document.getElementById('play_switch');
 const player_display = document.querySelector('.player_section')
 let playlist = [] //array of songs
 
@@ -41,7 +42,6 @@ const song3 = new Songs(
 
 //function for Pause & Play Button
 function PlayPause() { 
-    let playBtn = document.getElementById('play_switch');
     if (song.paused === true) {
         song.play();
         playBtn.className = "fa-solid fa-pause fa-xl"
@@ -68,7 +68,7 @@ function showSong() {
     download.href = playlist[num].src;
     display_title.innerHTML = playlist[num].title;
     display_artist.innerHTML = playlist[num].artist;
-    display_pic.style.background = `url(${playlist[num].pic})`;
+    display_pic.src = `${playlist[num].pic}`;
     document.body.style.background = `url(${playlist[num].pic}) no-repeat center fixed`
 }
 showSong();
@@ -84,6 +84,12 @@ function next() {
     showSong();
     song.play()
 }
+//go to next song after current track is over automatically
+setInterval(function() { 
+    if(song.currentTime === song.duration) { 
+    next()
+    }
+}, 1000);
 
 //previous song function
 function prev() { 
@@ -173,7 +179,8 @@ function playSong(i) {
     song.play();
     display_title.innerHTML = playlist[i].title;
     display_artist.innerHTML = playlist[i].artist;
-    display_pic.style.background = `url(${playlist[i].pic})`;
+    playBtn.className = "fa-solid fa-pause fa-xl"
+    display_pic.src = `${playlist[i].pic}`;
     document.body.style.background = `url(${playlist[i].pic}) no-repeat center fixed`;
     togglePlayer();
     
