@@ -4,7 +4,8 @@ const display_pic = document.querySelector('.album_art')
 const display_title = document.querySelector('#title')
 const display_artist = document.querySelector('#artist')
 const download = document.querySelector('#downloadBtn')
-const playlist_display = document.querySelector('.playlist_section')
+const homeScreen =document.querySelector('.home_screen')
+const playlist_display = document.querySelector('.playlist_songs')
 const playBtn = document.getElementById('play_switch');
 const player_display = document.querySelector('.player_section')
 let playlist = [] //array of songs
@@ -69,7 +70,7 @@ function showSong() {
     display_title.innerHTML = playlist[num].title;
     display_artist.innerHTML = playlist[num].artist;
     display_pic.src = `${playlist[num].pic}`;
-    document.body.style.background = `url(${playlist[num].pic}) no-repeat center fixed`
+    //document.body.style.background = `url(${playlist[num].pic}) no-repeat center fixed`
 }
 showSong();
 console.log(playlist.length)
@@ -161,29 +162,47 @@ volumeSlider.addEventListener('input', function changeVol(e) {
 //===========TOGGLE SWITCH========
 function togglePlayer() { 
   player_display.style.display = "block";
-  playlist_display.style.display = "none";
+  homeScreen.style.display = "none";
   document.getElementById('playerBtn').classList.add('active');
   document.getElementById('listBtn').classList.remove('active');
+  //showSong();
 }
 function toggleList() {
     player_display.style.display = "none";
-    playlist_display.style.display = "block";
+    homeScreen.style.display = "block";
     document.getElementById('listBtn').classList.add('active');
     document.getElementById('playerBtn').classList.remove('active');
     document.body.style.background = `url("album_art.jpg")`
 }
-//========PLAYLIST SECTION==========
-function playSong(i) { 
-    song.src = playlist[i].src;
-    download.href = playlist[i].src;
-    song.play();
-    display_title.innerHTML = playlist[i].title;
-    display_artist.innerHTML = playlist[i].artist;
+//=========PLAYLIST SECTION===========
+const heroPic = document.querySelector('.hero_pic');
+const heroText = document.querySelector('.hero_text');
+let heroSong = 0
+function heroSlide() { 
+    heroSong += 1;
+    if(heroSong > playlist.length -1) { 
+        heroSong = 0
+    };
+    heroPic.src = playlist[heroSong].pic;
+    heroText.innerHTML = `<h5>Trending</h5>
+           <h1 class="swoop hero_title">${playlist[heroSong].title}</h1>
+           <h3 class="hero_artist fade">${playlist[heroSong].artist}</h3>
+           
+           <button onclick="playSong(${heroSong})">Listen Now <i class="fa-solid fa-play"></i></button>`
+};
+//heroSlide()
+setInterval(heroSlide, 3500);
+
+function playSong(a) { 
+    display_title.innerHTML = playlist[a].title;
+    display_artist.innerHTML = playlist[a].artist;
     playBtn.className = "fa-solid fa-pause fa-xl"
-    display_pic.src = `${playlist[i].pic}`;
-    document.body.style.background = `url(${playlist[i].pic}) no-repeat center fixed`;
+    display_pic.src = `${playlist[a].pic}`;
+    song.src = playlist[a].src;
+    download.href = playlist[a].src;
+    song.play();
+    document.body.style.background = `url(${playlist[a].pic}) no-repeat center fixed`;
     togglePlayer();
-    
 }
 function songList() { 
     let text = ""
