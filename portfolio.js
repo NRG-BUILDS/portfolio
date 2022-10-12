@@ -99,7 +99,7 @@ function swoop() {
   for (let i = 0; i < swoops.length; i++) {
     let windowHeight = window.innerHeight;
     let elementTop = swoops[i].getBoundingClientRect().top;
-    let elementVisible = 150;
+    let elementVisible = 30;
     if (elementTop < windowHeight - elementVisible) {
       swoops[i].classList.add("active");
     } else {
