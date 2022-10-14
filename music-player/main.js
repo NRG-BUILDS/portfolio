@@ -94,9 +94,14 @@ setInterval(function() {
 
 //previous song function
 function prev() { 
-    if(num === 0) { 
-        num = 0
-    } else { num -= 1}
+    if (num === 0) {
+        num = 0;
+    } else if(song.currentTime > 5) { 
+        num;
+    }
+    else if(song.currentTime < 5) { 
+        num -= 1;
+    }
     showSong();
     song.play()
 }
