@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shizzabelle's Store</title>
+    <link rel="stylesheet" href="store.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <section class="topMenu">
+        <div>
+            <button onclick="cancelPreview()" id="homeBtn"><span class="material-icons">home</span></button>
+        </div>
+        <div>
+            <span class="navLogo"><a href="index.html">Shizzabelle<sup>©</sup></a></span>
+        </div>
+        <div>
+            <button onclick="showCart()"><span class="material-icons">shopping_bag</span></button>
+        </div>
+    </section>
+        
+    <!--<section class="sidenav">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </section>-->
+<section class="store">
+        <div class="categoryGrid">
+            <div>
+                <a href="#">Gowns ##</a>
+            </div>
+            <div>
+                <a href="#">Hoodies ##</a>
+            </div>
+            <div>
+                <a href="#">Tops ##</a>
+            </div>
+        </div>
+    
+    <section class="highlight">
+        <!--image is set as background-->
+        <div class="prevBtn">
+            <button onclick="moveSlide(-1)"><span class="material-icons">navigate_before</span></button>
+        </div>
+        <div class="nextBtn">
+            <button onclick="moveSlide(1)"><span class="material-icons">navigate_next</span></button>
+        </div>
+        
+    </section>
+    
+    <section class="productContainer">
+        <div class="header swoopL">
+            <span>Trending Threads</span>
+        </div>
+        <div class="productGrid">
+            
+        </div>
+
+    </section>
+    <footer id="contact" class="reveal">
+        <h2 class="swoop">Lagos, Nigeria:</h2>
+        <span class="material-icons">location_pin</span>
+        <p>5th Floor Prestige Palladium Bayan, 129-140, Greams Road,Ikorudo.</p>
+        <h2 class="swoop">Ondo, Nigeria:</h2>
+        <span class="material-icons">location_pin</span>
+        <p>5th Floor Prestige Palladium Bayan, 129-140, Thousand Lights West, FUTA, Akure,Ondo.</p>
+        
+        <h2 class="swoop">Connect With Us:</h2>
+        <p><i class="bi bi-telephone"></i>
+            <a href="tel:+2349058632331">+2349058632331</a>
+        </p>
+        
+        <p><a href="https://api.whatsapp.com/send?l=en&text=Hi!%20I%27m%20interested%20in%20one%20of%20your%20products%20at%20SHIZZABELLE%20STORES%20&phone=+2349058632331">
+            <i class="bi bi-whatsapp"></i>+234 905 863 2331</a>
+        </p>
+        <p>
+            <a href="mailto:adebulejoy@gmail.com"><i class="bi bi-envelope-fill"></i>adebulejoy@gmail.com</a>
+        </p>
+        <div class="social-media">
+            
+            <a href="https://t.me/maximarktagency"><i class="bi bi-telegram"></i></a>
+            
+            <a href="https://www.facebook.com/maximarktagecncy/"><i class="bi bi-facebook"></i></a>
+            
+            <a href="https://www.linkedin.com/company/maximarktagency/"><i class="bi bi-linkedin"></i></a>
+            
+            <a href="https://twitter.com/maximarktagency?t=eCQv2pc19zwvJ-MXt7DVew&s=09"><i class="bi bi-twitter"></i></a>
+        </div>
+        
+        
+    </footer>
+</section><!--End of store view-->
+    <!--======PREVIEW SECTION======-->
+    <section class="preview">
+        <section class="productImageContainer">
+            <img id="productImage" src="" alt="">
+        </section>
+        
+        <section class="productInfo swoopU">
+            <div class="previewNameContainer">
+                <span id="productName"></span>
+                <span id="productPrice"></span>
+            </div>
+            <p id="productDesc"></p>
+            <div class="orderBtnContainer">
+                <button id="orderBtn">Order Now</button>
+                <button class="cartBtn"><span class="material-icons">shopping_bag</span></button>
+            </div>
+        </section>    
+    </section>
+<!--==========ORDER POPUP==========-->    
+    <section class="orderPopUp">
+        <h2>Order This Item On Whatsapp?</h2>
+        <button class="button"><a id="orderLink" href="...">Yes</a></button>
+        <br>
+        <button onclick="cancelOrder()">No</button>
+    </section>
+<!--=======CART LIST=======-->    
+    <section class="cart">
+        <section class="cartSection">
+            <a href="javascript:void(0)" onclick="showCart()"><span class="material-icons">close</a>
+            <br>
+            <span class="header">Items added to cart appear here...</span>
+        </section>
+        <div class="checkOutContainer">
+            <span id="cartTotal"></span>
+            <button id="checkOutBtn" onclick="orderAll()">Order All</button>
+        </div>
+    </section>
+    
+    
+    
+<script src="product.js"></script>
+<script src="store.js">store.js</script>
+</body>
+
+</html>

@@ -1,0 +1,209 @@
+body {
+    font-size: 15px;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+}
+html { scroll-behavior: smooth; }
+svg { display: block}
+.hero { 
+    text-align: center;
+    color: saddlebrown;
+    animation: 5s backgroundChange ease-in infinite;
+    animation-direction: alternate;
+    background: linear-gradient(80deg, white, saddlebrown, black);
+    background-size: 900% 100%;
+    padding: 70% 30px;
+    position: relative;
+}
+/*.heroCenter { 
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}*/
+.hero span, .hero a { 
+    display: block;
+}
+.hero a { 
+    display:inline-block;
+    text-decoration: none;
+    color: coral;
+}
+.material-icons { font-size: 48px}
+.title { 
+    display: block;
+    text-align: center;
+    margin:0;
+    font-size: 36px;
+    font-family: "Satisfy", cursive;
+    color: coral;
+}
+.bigText { 
+    display: block;
+    font-size: 48px;
+    font-family: Lobster;
+    height: 65px;
+    overflow: hidden;
+ }
+.fU {
+    animation: fadeUp ease-out;
+}
+.fL {
+    animation: fadeLeft ease-out;
+}
+.bigTextContainer { 
+    padding: 30px 0;
+}
+.btnShake { 
+    animation: btnShake 2s infinite;
+    animation-direction: alternate;
+}
+.specialText { 
+    color: coral;
+    font-family: "Pacifico", cursive;
+}
+.teamFlex { 
+    display: flex;
+    width: 100%;
+    overflow:scroll;
+}
+
+.aboutSection { 
+    background-color: saddlebrown;
+    padding-top: 30%;
+}
+.aboutCard { 
+    border-bottom: 3px dashed coral;
+    border-top: 3px dashed coral;
+    color: white;
+    padding: 30px;
+    line-height: 1.7;
+    margin: 10px auto 10px auto;
+}
+.aboutCard:nth-child(2n - 1){ 
+    margin-right: 20px;
+}
+.aboutCard:nth-child(2n) { 
+    margin-left: 20px;
+    text-align: right;
+}
+.teamSection { 
+    background-color: #99003d;
+    padding-top: 50px;
+}
+.teamCard { 
+    background-color: purple;
+    color: white;
+    width: 240px;
+    margin: 15px;
+    border-radius: 10px
+}
+.teamCard p { 
+    padding: 5px 45px 45px 5px;
+}
+.teamCard img {
+    text-align: center;
+    width: inherit;
+    height: 300px;
+    border-radius: inherit;
+    object-fit: cover
+}
+footer { 
+    background-color: #000d33;
+    padding: 5%;
+    color: #ff8000;
+    font-size: 17px;
+    
+}
+footer a { 
+    text-decoration: none;
+    color: inherit;
+}
+.social-media { 
+    text-align: center;
+    display: flex;
+    margin: 20% auto;
+}
+.social-media a { 
+    padding: 15px;
+    font-size: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--orange);
+    margin: auto 3%;
+}
+.fixed { 
+    position: fixed;
+    padding: 15px;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 50%;
+    background: #25D366;
+} /*Controls The Fixed WhatsApp Button*/
+.fixed a { 
+    font-size: 30px;
+    border-radius: 50%;
+    color:white;
+}
+/*""""""""""ANIMATIONS""""""""""*/
+@keyframes btnShake { 
+    0% { transform:translateX(10px)}
+    100% { transform:translateX(0px);}
+}
+@keyframes backgroundChange { 
+    0% { background-position: 0%}
+    100% { background-position:100%;}
+}
+@keyframes fadeUp { 
+    0% { 
+        transform: translateY(-60px);
+        opacity: 0;
+        filter: blur(0px);
+    }
+    100% { 
+        transform: translateY(0px);
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
+@keyframes fadeLeft { 
+    0% { 
+        transform: translateX(-90px);
+        opacity: 0;
+    }
+    100% { 
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+.dl1 { animation-duration: 2s }
+.dl2 { animation-duration: 1s }
+.dl3 { animation-duration: 1.5s }
+.dl4 { animation-duration: 2s }
+.dl5 { animation-duration: 2.5s }
+.dl6 { animation-duration: 3s }
+.dl7 { animation-duration: 3.5s }
+
+
+.reveal { 
+    position: relative;
+    opacity: 0;
+    transform: translateY(150px);
+    transition: 1s all ease;
+}
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+.swoop { 
+    position: relative;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: 1s all ease 0.5s;
+}
+.swoop.active { 
+    transform: translateX(0);
+    opacity: 1;
+}
