@@ -24,7 +24,7 @@ function changeSlide() {
     }
     slideImage.style.backgroundImage = `url('slide${sliderIndex}.jpg')`
 }
-setInterval(changeSlide, 3000)
+setInterval(changeSlide, 6000)
 
 
 window.addEventListener("scroll", reveal);

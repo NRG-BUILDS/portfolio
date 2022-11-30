@@ -1,5 +1,7 @@
 const homeBtn = document.getElementById('homeBtn');
 const productDisplay = document.querySelector('.productGrid');
+const categoryDisplay = document.querySelector('.categoryCardContainer');
+const catHead = document.getElementById('catHead')
 const previewDisplay = document.querySelector('.preview')
 const storeDisplay = document.querySelector('.store')
 const previewName = document.getElementById('productName')
@@ -15,15 +17,22 @@ let cartList = document.querySelector('.cartSection')
 let cartTotalDisplay = document.getElementById('cartTotal')
 const cartArray = []
 const productArray = []
+const hoodieArray = []
+const topArray = []
+const gownArray = []
 
 //class constructor for products
-function Product(vName, Name, Price, Pic, Desc){
+function Product(vName, Name, Price, Pic, Desc, Category){
     this.variableName = vName
     this.name = Name
     this.price = Price
     this.pic = Pic
     this.desc = Desc
+    this.cat = Category
     productArray.push(this)
+    if(Category == "Top") { topArray.push(this)}
+    if(Category == "Gown") { gownArray.push(this)}
+    if(Category == "Hoodie") { hoodieArray.push(this)}
 }
 const hoodie = new Product( 
     "hoodie",
@@ -31,27 +40,31 @@ const hoodie = new Product(
     5999.99,
     "hoodie.jpg",
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "Hoodie"
     )
 const dress1 = new Product( 
     "dress1",
     "FLAY ARM STYLE ",
     5000.00,
     "dress1.jpg",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "Gown"
     )
 const dress2 = new Product(
     "dress2",
     "FULLY FESTIVE",
     5999.99,
     "dress2.jpg",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "Gown"
     )
 const dress3 = new Product( 
     "dress3",
-    "ANKARA HOODIE",
-    5999.99,
+    "HOODIE XL",
+    6999.99,
     "hoodie.jpg",
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "Hoodie"
     )
 const dress4 = new Product( 
     "dress4",
@@ -59,17 +72,44 @@ const dress4 = new Product(
     4499.99,
     "dress4.jpg",
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "Top"
     )
 const dress5 = new Product(
     "dress5",
-    "ANKARA HOODIE",
+    "SLEEVELESS GOWN",
     5999.99,
     "dress5.jpg",
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "Gown"
 )
+
+
+function renderCategoryLine(cat) { 
+    if(cat == hoodieArray) { 
+        catHead.innerHTML = "Shizzabelle Hoodies"
+    } 
+    if (cat == topArray) {
+        catHead.innerHTML = "Shizzabelle Tops"
+    }
+    if (cat == gownArray) {
+        catHead.innerHTML = "Shizzabelle Gowns"
+    }
+    categoryDisplay.innerHTML = ""
+    for (x in cat) { 
+        categoryDisplay.innerHTML += `<div class="categoryCard swoopL">
+                <img src="${cat[x].pic}" alt="${cat[x].name}">
+                <div class="cInfo">
+                    <span class="cName">${cat[x].name}</span>
+                <span class="cPrice">₦${cat[x].price}</span><br>
+                <button onclick="preview(${cat[x].variableName})"><span class="material-icons md-48">arrow_circle_right</span></button>
+                </div>
+            </div>`
+    }
+}
+
 function renderProductLine() { 
     for (x in productArray) { 
-        productDisplay.innerHTML += `<div class="product swoop">
+        productDisplay.innerHTML += `<div class="product swoopL">
                 <img src="${productArray[x].pic}" alt="${productArray[x].name}">
                 <div class="pInfo">
                     <span class="pName">${productArray[x].name}</span>
