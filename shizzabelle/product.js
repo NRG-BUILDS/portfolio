@@ -168,7 +168,8 @@ function orderAll() {
         link += `${cartArray[x].name},+`
     }
     link += `from+Shizzabelle+Stores`
-    orderLink.href = link
+    orderLink.href = link;
+    showCart()
 }
 let cartMoney = 0
 function addCart(i) { 
