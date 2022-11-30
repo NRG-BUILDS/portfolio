@@ -45,7 +45,7 @@ body {
     width: 100%;
     display: grid;
     text-align: center;
-    margin-top: 60px;
+    margin: 30px auto;
     padding: 10px 0;
     grid-template-columns: 33% 33% 33%;
 }
@@ -54,14 +54,23 @@ body {
     color: black;
     font-weight: bolder;
 }
+.categoryGrid a:hover { 
+    border-bottom: 2px solid black;
+}
 .highlight { 
     width: 95%;
-    height: 200px;
-    margin: 40px auto 40px auto;
+    height: 220px;
+    margin: 60px auto 40px auto;
     background: url('slide1.jpg');
     background-size: cover;
     border-radius: 10px;
     position: relative;
+    animation: highlightSlide 3s infinite;
+    animation-direction: alternate;
+}
+@keyframes highlightSlide { 
+    0% { width: 0%}
+    100% { width: 95%}
 }
 .highlight button { 
     background: transparent;
@@ -77,10 +86,50 @@ body {
     position: absolute;
     right: 0; bottom: 50%;
 }
+.categoryCardContainer { 
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow: auto;
+}
+.categoryCard {
+    position: relative;
+    width: 200px;
+    margin: 15px;
+    margin: auto 5px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.categoryCard img{ 
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: 260px;
+    border-radius: inherit;
+    object-fit: cover
+}
+.categoryCard:hover .cInfo { 
+    background-color: black;
+    color:white;
+    margin: auto 10px;
+}
+.cInfo { 
+    height: 120px;
+    padding: auto 5px;
+    background-color: #e6e6e6;
+    color: black;
+    width: inherit;
+    transition: 0.5s;
+    border-radius: inherit;
+}
+.catPic img{ 
+    width: inherit;
+    height: 100%;
+    display: block;
+}
 .productContainer { 
     width: 95%;
-    margin: auto;
-    margin-top: 120px;
+    margin: 120px auto;
 }
 .productGrid { 
     display: grid;
@@ -90,9 +139,14 @@ body {
     row-gap: 25px
 }
 .header { 
+    display:block;
     font-size: 45px;
     font-weight: 200;
     margin: 15px auto;
+}
+.dashed { 
+    border-top: 3px dashed coral;
+    border-bottom: 4px dashed coral;
 }
 .product { 
     height: 220px;
@@ -102,7 +156,6 @@ body {
     border-radius: 15px;
 }
 .pInfo{ 
-    display:block;
     position: absolute;
     background-color: black;
     bottom: 0;
@@ -111,19 +164,19 @@ body {
     overflow: hidden;
     transition: 0.5s;
 }
-.pName { 
+.pName, .cName { 
     color: #737373;
     font-size: 15px;
 }
-.pPrice { 
+.pPrice, .cPrice { 
     color: white;
     font-weight: bolder;
     font-size: 18px;
 }
-.product:hover .pInfo { 
+.product:hover .pInfo, .categoryCard:hover .pInfo { 
     height: 45%;
 }
-.pInfo button { 
+.pInfo button, .cInfo button { 
     color: white;
     background-color: inherit;
     border: none;
@@ -275,6 +328,9 @@ footer a {
     font-size: 30px;
     border-radius: 50%;
     color:white;
+}
+.siteCredits { 
+    text-align: center;
 }
 /*""""""ANIMATIONS""""""*/
 .swoopL { 

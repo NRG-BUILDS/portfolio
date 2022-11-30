@@ -147,6 +147,9 @@ footer a {
     border-radius: 50%;
     color:white;
 }
+.siteCredits { 
+    text-align: center;
+}
 /*""""""""""ANIMATIONS""""""""""*/
 @keyframes btnShake { 
     0% { transform:translateX(10px)}
