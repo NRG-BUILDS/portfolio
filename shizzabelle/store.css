@@ -41,6 +41,42 @@ body {
 .topMenu button:active { 
     background-color: saddlebrown;
 }
+#loginModal { 
+    position: fixed;
+    top: 0; left:0;
+    height: 100%;
+    overflow: auto;
+    background-color: saddlebrown;
+    text-align: center;
+    z-index: 100;
+    padding: 70% 5%;
+    transition: 0.9s;
+}
+#loginModal h2 { 
+    font-family: "Satisfy", cursive;
+    color: coral;
+}
+#loginModal input { 
+    outline: none;
+    background-color: inherit;
+    border: 3px dashed white;
+    border-radius: 25px;
+    margin: 10px auto;
+    padding: 15px 5px;
+    transition: 0.5s;
+    color: white;
+}
+#loginModal input:focus { 
+    border-color: coral
+}
+#signUpBtn, #closeBtn { 
+    padding: 10px 40px;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    margin: 10px auto;
+}
 .categoryGrid { 
     width: 100%;
     display: grid;
@@ -255,7 +291,7 @@ body {
     width: 80%;
     text-align: center;
     padding: 50px 20px;
-    z-index: 1000;
+    z-index: 4;
     opacity: 0.9;
 }
 .orderPopUp button { 
@@ -279,7 +315,7 @@ body {
     padding: auto 5px;
     background-color:white;
     box-shadow: -2px 0 170px #666666;
-    z-index: 1000;
+    z-index: 5;
     transition: .2s;
 }
 .cartItem { 

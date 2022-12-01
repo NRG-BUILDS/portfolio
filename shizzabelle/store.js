@@ -1,7 +1,14 @@
 //open navigation menu
 const nav = document.querySelector('.nav')
-
-
+function toggleModal() { 
+    let modal = document.getElementById('loginModal')
+    modal.style.padding = "0 0";
+    modal.style.height = "0%";
+}
+function createUser() { 
+    username = document.getElementById('username').value;
+    toggleModal();
+}
 //for highlight slider
 const slideImage = document.querySelector('.highlight')
 let sliderIndex = 1;

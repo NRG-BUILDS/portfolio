@@ -7,7 +7,7 @@
     <title>Shizzabelle's Store</title>
     <link rel="stylesheet" href="store.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Pacifico&family=Satisfy&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 </head>
 
@@ -24,14 +24,13 @@
         </div>
     </section>
         
-    <!--<section class="sidenav">
-        <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-    </section>-->
+    <section id="loginModal">
+            <h2>Hi there friend, shopping is easier if we know our customers</h2>
+            <input type="text" placeholder="Username" id="username" required><br>
+            <input type="email" placeholder="Email Address" id="usermail" required><br>
+            <button id="signUpBtn" onclick="createUser()">Sign Up</button>
+            <button id="closeBtn" onclick="toggleModal()">Explore Without Signing</button>
+    </section>
 <section class="store">
        
     

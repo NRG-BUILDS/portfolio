@@ -1,3 +1,4 @@
+
 const homeBtn = document.getElementById('homeBtn');
 const productDisplay = document.querySelector('.productGrid');
 const categoryDisplay = document.querySelector('.categoryCardContainer');
@@ -154,7 +155,7 @@ function cancelPreview(item) {
 function order(item) { 
     console.log("yes")
     orderPopUp.style.display = "block";
-    orderLink.href = `http://wa.me/2349058632331?text=Hi,+I+am+interested+in+a+${item.name}+from+Shizzabelle+Stores`;
+    orderLink.href = `http://wa.me/2349058632331?text=Hi,++I+am+${username}.+I+am+interested+in+a+${item.name}+from+Shizzabelle+Stores`;
 }
 function cancelOrder() { 
     orderPopUp.style.display = "none";
@@ -163,12 +164,12 @@ function cancelOrder() {
 
 function orderAll() { 
     orderPopUp.style.display = "block";
-    let link = `http://wa.me/2349058632331?text=Hi,+I+am+interested+in+a+`;
+    let link = `http://wa.me/2349058632331?text=Hi,+I'm+*${username}*%0AI+am+interested+in:%0A`;
     for (x in cartArray) { 
-        link += `${cartArray[x].name},+`
+        link += `${cartArray[x].name},%0A`
     }
-    link += `from+Shizzabelle+Stores`
-    orderLink.href = link;
+    link += `from+*Shizzabelle+Stores*`
+    orderLink.href = link
     showCart()
 }
 let cartMoney = 0
