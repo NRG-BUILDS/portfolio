@@ -30,6 +30,7 @@ function Product(vName, Name, Price, Pic, Desc, Category){
     this.pic = Pic
     this.desc = Desc
     this.cat = Category
+    this.quant = 1
     productArray.push(this)
     if(Category == "Top") { topArray.push(this)}
     if(Category == "Gown") { gownArray.push(this)}
@@ -46,7 +47,7 @@ const hoodie = new Product(
 const dress1 = new Product( 
     "dress1",
     "FLAY ARM STYLE ",
-    5000.00,
+    5499.99,
     "dress1.jpg",
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "Gown"
@@ -147,13 +148,12 @@ function cancelPreview(item) {
     storeDisplay.style.display = "block";
     previewDisplay.style.display = "none"
     homeBtn.innerHTML = '<span class="material-icons">home</span>'
-    if(cartPanel.style.width == "75%") { cartPanel.style.width = "0%"
+    if(cartPanel.style.width == "95%") { cartPanel.style.width = "0%"
         
     }
 }
 
 function order(item) { 
-    console.log("yes")
     orderPopUp.style.display = "block";
     orderLink.href = `http://wa.me/2349058632331?text=Hi,++I+am+${username}.+I+am+interested+in+a+${item.name}+from+Shizzabelle+Stores`;
 }
@@ -166,41 +166,62 @@ function orderAll() {
     orderPopUp.style.display = "block";
     let link = `http://wa.me/2349058632331?text=Hi,+I'm+*${username}*%0AI+am+interested+in:%0A`;
     for (x in cartArray) { 
-        link += `${cartArray[x].name},%0A`
+        link += `${cartArray[x].quant}x+${cartArray[x].name},%0A`
     }
     link += `from+*Shizzabelle+Stores*`
     orderLink.href = link
     showCart()
 }
-let cartMoney = 0
 function addCart(i) { 
-    cartArray.push(i);
-    cartMoney += Number(i.price)
-    console.log(cartMoney)
-    cartPanel.style.width = "75%"
+    if (cartArray.includes(i) === true) {    
+        i.quant += 1;
+        cartPanel.style.width = "95%";
+        renderCart();
+    } else { 
+        cartArray.push(i);
+    cartPanel.style.width = "95%";
     renderCart();
+    }
+  document.getElementById('showCartBtn').classList.add('shakeBtn')  
 }
 function removeFromCart(item, indexNumber) { 
-    cartArray.splice(indexNumber, 1)
-    cartMoney -= item.price
+    cartArray.splice(indexNumber, 1);
+    renderCart();
+}
+function changeQuantity(item, num) {
+   if (item.quant >= 1) { 
+       item.quant += num
+   }
+   if (item.quant === 0) {
+       item.quant = 1;
+   }
     renderCart();
 }
 function renderCart() { 
-    text = `<a href="javascript:void(0)" onclick="showCart()"><span class="material-icons">close</span></a>
+    text = `<a href="javascript:void(0)" onclick="showCart()"><span class="material-icons">arrow_back</span></a>
         <br>`
+        let cartMoney = 0
     for (x in cartArray) { 
         cartArray[x].indexNum = x;
         
-        text += `<div class="cartList swoopL"> <span class="cartItem">${cartArray[x].name}</span>
+        text += `<div class="cartList swoopL"> 
+        <div><img class='cartPic' src='${cartArray[x].pic}'><span class="cartItem">${cartArray[x].name}</span>
+        </div>
+        <div class="cartControlsContainer"><button id="minusBtn" onclick= "changeQuantity(${cartArray[x].variableName}, -1)"><span class="material-icons">remove</span></button>
+        <span id="quantity">${cartArray[x].quant}</span>
+        <button onclick="changeQuantity(${cartArray[x].variableName}, 1)"><span class="material-icons">add</span></button>
+        </div>
         <span class="cartPrice">₦${cartArray[x].price}  <a href="javascript:void(0)" onclick="removeFromCart(${cartArray[x].variableName}, ${cartArray[x].indexNum})"><span class="material-icons">close</span></a></span>
         </div><hr>`
+        
+        cartMoney += (cartArray[x].quant * cartArray[x].price)
     }
    cartList.innerHTML = text;
    cartTotalDisplay.innerHTML = "₦" + cartMoney.toFixed(2);
 }
 function showCart() { 
-    if (cartPanel.style.width == "75%") { 
+    if (cartPanel.style.width == "95%") { 
         cartPanel.style.width = 0
-    } else { cartPanel.style.width = "75%"
+    } else { cartPanel.style.width = "95%"
     }
 }

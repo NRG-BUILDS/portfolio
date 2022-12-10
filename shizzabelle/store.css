@@ -41,6 +41,7 @@ body {
 .topMenu button:active { 
     background-color: saddlebrown;
 }
+
 #loginModal { 
     position: fixed;
     top: 0; left:0;
@@ -87,7 +88,7 @@ body {
 }
 .categoryGrid a, .cartSection a { 
     text-decoration: none;
-    color: black;
+    color: inherit;
     font-weight: bolder;
 }
 .categoryGrid a:hover { 
@@ -248,7 +249,7 @@ body {
 .productInfo:hover { 
    border-top: 5px solid orange;
 }
-.previewNameContainer, .orderBtnContainer, .cartList, .checkOutContainer { 
+.previewNameContainer, .orderBtnContainer, .checkOutContainer, .cartControlsContainer { 
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -267,7 +268,7 @@ body {
     margin: auto 30px;
 }
 #orderBtn, #checkOutBtn { 
-    padding: 15px 40px;
+    padding: 10px 40px;
     border-radius: 20px;
     border: 1px solid orange;
     background-color: black;
@@ -279,6 +280,9 @@ body {
     background-color: saddlebrown;
     padding: 15px;
     color: white;
+}
+.cartBtn:active { 
+    background-color: coral;
 }
 .orderPopUp { 
     display:none;
@@ -313,20 +317,62 @@ body {
     height: 100%;
     width: 0%;
     padding: auto 5px;
-    background-color:white;
+    background-color: #f2f2f2;
     box-shadow: -2px 0 170px #666666;
     z-index: 5;
     transition: .2s;
+    overflow: scroll;
 }
 .cartItem { 
     font-weight: bolder;
 }
+#quantity { 
+    color: coral;
+    font-weight: bolder;
+}
+.cartPic { 
+    width: 60px;
+    height: 60px;
+    float:left;
+}
+.cartList { 
+    display: grid;
+    grid-template-columns: 40% 30% 30%;
+    text-align: center;
+    align-items: center;
+    padding: 15px 5px;
+    margin: 20px 5px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px #ccc;
+    transition: 0.3s;
+}
+.cartList:hover, .cartList button:active .cartList { 
+    background-color: saddlebrown;
+    color: white;
+}
+.cartList button { 
+    background-color: inherit;
+    color: inherit;
+    font-weight: bolder;
+    border: none;
+    font-size: 18px;
+}
+.cartList button:active { 
+    background-color: coral;
+    color: white;
+}
 .checkOutContainer { 
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
-    padding: 5px 0;
-    background-color: #e6e6e6;
+    padding: 5px 5px;
+    color: white;
+    background-color: saddlebrown;
+}
+#cartTotal { 
+    font-size: 18px;
+    font-weight: bolder;
 }
 /*"""""""""""FOOTER"""""""""""*/
 footer { 
@@ -369,6 +415,14 @@ footer a {
     text-align: center;
 }
 /*""""""ANIMATIONS""""""*/
+.shakeBtn { 
+    animation: shake 0.3s 10;
+}
+@keyframes shake { 
+    0% { transform: rotate(30deg)}
+    50% { transform: rotate(-30deg)}
+    100% { transform: rotate(30deg)}
+}
 .swoopL { 
     animation: swoopLeft 1s;
 }
