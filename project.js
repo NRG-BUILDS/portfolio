@@ -12,7 +12,7 @@ const project1 = new Projects(
     "cakes.jpg",
     "./dammycakes/")
 const project2 = new Projects(
-    "Furniture Site (Mobile Only)",
+    "Furniture Site (Mobile view)",
     "furniture.jpg",
     "./furniture/")
 const project3 = new Projects(
@@ -28,9 +28,13 @@ const project5 = new Projects(
     "calculator.jpg",
     "./calculator/")    
 const project6 = new Projects( 
-    "Online Music Streaming App",
+    "Online Music Streaming App (Mobile view",
     "music.jpg",
     "./music-player/")    
+const project7 = new Projects( 
+    "Fashion Store (Mobile view only)",
+    "shizzabelle.jpg",
+    "./shizzabelle/")        
 
 function showProjects() { 
     let text = ""
