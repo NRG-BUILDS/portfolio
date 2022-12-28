@@ -24,12 +24,12 @@ const gownArray = []
 
 //class constructor for products
 function Product(vName, Name, Price, Pic, Desc, Category){
-    this.variableName = vName
-    this.name = Name
-    this.price = Price
-    this.pic = Pic
-    this.desc = Desc
-    this.cat = Category
+    this.variableName = vName;
+    this.name = Name;
+    this.price = Price;
+    this.pic = Pic;
+    this.desc = Desc;
+    this.cat = Category;
     this.quant = 1
     productArray.push(this)
     if(Category == "Top") { topArray.push(this)}
@@ -135,7 +135,7 @@ function preview(item) {
 }
 function showPreview() { 
     storeDisplay.style.display = "none"
-    previewDisplay.style.display = "block"
+    previewDisplay.style.display = "grid"
     homeBtn.innerHTML = '<span class="material-icons">arrow_back</span>'
 }
 function cancelPreview(item) { 
