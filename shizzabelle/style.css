@@ -3,6 +3,9 @@ body {
     margin: 0;
     font-family: "Open Sans", sans-serif;
 }
+* { 
+    box-sizing: border-box;
+}
 html { scroll-behavior: smooth; }
 svg { display: block}
 .hero { 
@@ -118,6 +121,9 @@ footer {
     font-size: 17px;
     
 }
+footer .title { 
+    text-align: left;
+}
 footer a { 
     text-decoration: none;
     color: inherit;
@@ -209,4 +215,16 @@ footer a {
 .swoop.active { 
     transform: translateX(0);
     opacity: 1;
+}
+@media screen and (min-width: 480px) { 
+    .hero { 
+        padding:15% 30px;
+    }
+    .aboutSection { 
+        padding:0 10%;
+        padding-top: 15%;
+    }
+    .teamFlex { 
+        justify-content: center;
+    }
 }
