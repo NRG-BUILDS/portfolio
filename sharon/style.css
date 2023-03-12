@@ -1,0 +1,308 @@
+body {
+    font-size: 16px;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    
+}
+:root { 
+    --grey: #dddddd;
+    --darkblue: #1e3c5b;
+    --orange: #ff8c32;
+    --green: #80b380
+}
+* { 
+    box-sizing: border-box;
+}
+a { 
+    text-decoration: none;
+    color: inherit;
+}
+.material-icons-outlined { 
+    vertical-align: middle;
+    font-size: 1.5em;
+    display: inline;
+}
+p { 
+    line-height: 1.6;
+}
+.special { 
+    font-family: 'Leckerli One', serif;
+}
+nav { 
+    position: fixed;
+    top: 0; left: 0;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    align-items: center;
+    padding: 2% 5%;
+    width: 100%;
+    height: 8%;
+    box-shadow: 0 1px 2px #333333;
+    background: white;
+    z-index: 3;
+}
+.cart_btn { 
+    display: inline-block;
+    height: 100%;
+    border: none;
+    color: white;
+    border-radius: 20px 0 0 20px;
+    background-color: var(--orange);
+}
+.navbtn_container { 
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 0 10%;
+    height: 100%;
+    border-radius: 40px;
+    margin: 0;
+    background-color: inherit;
+}
+#cart_number { 
+    height: 100%;
+    background: black;
+    border-radius: 0 20px 20px 0;
+    vertical-align: center;
+}
+header { 
+    display: flex;
+    align-items: center;
+    color: white;
+    height: 90vh;
+    margin-top: 15%;
+    padding: 10%;
+    line-height: 1.5;
+    background: #06113c;
+    background: linear-gradient(45deg, black, var(--darkblue), var(--grey), var(--orange));
+    background-size: 900% 100%;
+    animation: variableColor 5s infinite alternate;
+}
+@keyframes variableColor { 
+    0% { background-position: 0%}
+    100% { background-position:100%;}
+}
+.hero_button { 
+    border: none;
+    background-color: var(--green);
+    padding: 20px 15px;
+    margin: 20px 0;
+    color: white;
+    font-size: 1.3rem;
+    border-radius: 10px
+}
+.header-sm { 
+    display: block;
+    font-size: 1.4rem;
+    color: seagreen;
+}
+.header-md, #open_status, .agriproduct .header-md { 
+    display: block;
+    font-size: 1.8rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    margin: 2% 0;
+}
+.header-xl { 
+    display: block;
+    font-size: 2.6rem;
+    font-weight: 600;
+}
+.header-light { 
+    display: block;
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 350;
+    margin: 3% 0;
+}
+.jump_section { 
+    text-align: center;
+    padding: 30% 10%;
+}
+.jump_box { 
+    border-radius: 20px;
+    padding: 12% 10%;
+    margin: 6% 0;
+    color: white;
+    text-align: left;
+}
+.jump_box.one { 
+    background-color: var(--darkblue);
+}
+.jump_box.two { 
+    background-color: var(--grey);
+}
+.jump_box.three { 
+    background-color: var(--orange);
+}
+
+.about_section { 
+    padding: 30% 8%;
+    background-color: #fff0e6;
+}
+.about_container { 
+    width: 100%;
+    padding: 0 7%;
+    background-color: white;
+    border-radius: 20px;
+}
+.about_pic { 
+    width: 100%;
+    height: 50%;
+    margin: 5% 0;
+    object-fit: cover;
+}
+#veterinary { 
+    background: var(--darkblue);
+    padding: 30% 0;
+    color: white;
+}
+#veterinary .header-md, #veterinary .header-sm {text-align: center}
+.services_flex { 
+    display: flex;
+    margin-left: 5%;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+}
+.services_flex>div { 
+    scroll-snap-align: start; 
+    
+    flex: 1 0 75%;
+    margin: 0 5%;
+    border-radius: 20px;
+    color: black;
+    background: white;
+}
+.services_flex>div span { 
+    color: var(--darkblue);
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+.services_flex>div span.material-icons-outlined { 
+    color: inherit;
+    
+}
+.service_details { 
+    padding: 12% 10%;
+}
+.service_pic { 
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+.bluebtn { 
+    border: none;
+    color: white;
+    background-color: var(--darkblue);
+    padding: 5% 9%;
+    border-radius: 20px;
+}
+.vet_card { 
+    border-radius: 20px;
+    border: 2px solid var(--orange);
+    padding: 12% 10%;
+    margin: 6% 8%;
+}
+.vet_card span { 
+    margin: 5% 0;
+    display: block;
+}
+#agribusiness { 
+    padding: 30% 7%;
+    text-align: center;
+}
+.agriproduct_container { 
+    margin: 10% 0;
+    text-align: left;
+}
+.agriproduct { 
+    background-color: #f7f7f7;
+    padding: 15% 10% 30% 10%;
+    border-radius: 20px;
+    position: relative;
+    margin: 10% 0;
+}
+.agriproduct img { 
+    height: 100%;
+    width: 100%;
+    padding: 10% 0;
+}
+.agriproduct span { 
+    display: block;
+    color: var(--darkblue);
+    font-weight: 450;
+    font-size: 1.2em;
+    margin: 4% 0;
+}
+.old_price { 
+    opacity: 0.5;
+}
+.product_type { 
+    display: inline-block;
+    position: absolute;
+    top: 0; left: 0;
+    background-color: var(--darkblue);
+    padding: 5px 10px;
+    border-radius: 0 10px 10px 0;
+    color: white!important;
+}
+.btns_container { 
+    display: grid;
+    width: 100%;
+    grid-template-columns: 45% 45%;
+    justify-content: space-between;
+}
+.btns_container>button>span { 
+    display: inline;
+    margin: 0;
+}
+.addCart_btn { 
+    background-color: var(--orange);
+}
+#poultry { 
+    background-color: #ffe2cc;
+}
+.poultry_text { 
+    padding: 25% 10%;
+}
+.poultry_service { 
+    width: 95%;
+    height: 350px;
+    margin: 10% auto;
+    position: relative;
+}
+.poultry_service img { 
+    width: 100%;
+    height: 100%;
+}
+.poultry_service span { 
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border-radius: 10px;
+    font-size: 1.2em;
+    padding: 7% 12%;
+}
+
+/*********ANIMATIONS*******/
+.slide_r { 
+    transform: translateX(-80px);
+    opacity: 0;
+    transition: 1s;
+}
+.slide_r.active { 
+    transform: translateX(0);
+    opacity: 1;
+}
+.slide_u { 
+    transform: translateY(80px);
+    opacity: 0;
+    transition: 1s;
+}
+.slide_u.active { 
+    transform: translateY(0);
+    opacity: 1;
+}
